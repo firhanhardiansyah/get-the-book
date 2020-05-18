@@ -1,0 +1,122 @@
+html {
+	position: relative;
+	min-height: 100%;
+}
+.bg-green {
+	background: #27ae60;
+}
+.bg-register {
+	background: #2ecc71;
+}
+.txtb {
+  border-bottom: 2px solid #adadad;
+  position: relative;
+  margin: 30px 0;
+}
+
+.txtb input {
+  font-size: 15px;
+  color: #333;
+  border: none;
+  width: 100%;
+  outline: none;
+  background: none;
+  padding: 0 5px;
+  height: 40px;
+}
+
+.txtb span::before {
+  content: attr(data-placeholder);
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  z-index: -1;
+  transition: .5s;
+}
+
+.txtb span::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-image: linear-gradient(120deg, #3498db, #8e44ad);
+  transition: .5s;
+}
+
+.focus + span::before {
+  top: -5px;
+}
+
+.focus + span::after {
+  width: 100%;
+}
+#footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 70px;
+	padding-top: 25px;
+	color: white;
+	font-size: 1em;
+	text-align: center;
+}
+
+.textarea {
+	resize: none;
+}
+.card-register {
+	width: 450px;
+	height: auto;
+	margin: 50px auto;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card-login {
+	width: 450px;
+	height: auto;
+	margin: 80px auto;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.bg-pink {
+	background-color: #ff3386;
+}
+
+.page-profile {
+	overflow: hidden;
+}
+
+.page-profile .side-bar-profile {
+	float: left;
+	width: 200px;
+	background: #1e5474;
+}
+.page-profile .side-bar-profile .side-bar-ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+.page-profile .side-bar-profile .side-bar-ul .side-bar-li .side-bar-a {
+	display: block;
+	color: white;
+	text-decoration: none;
+	padding: 10px 20px;
+}
+.side-bar-profile .side-bar-ul .side-bar-li .side-bar-a:hover,
+.side-bar-profile .side-bar-ul .side-bar-li .side-bar-a.active {
+	color: white;
+	background-color: #ff9825;
+}
+.profile-content {
+	float: left;
+	background: white;
+}
+.img-size {
+	margin-top: 20px;
+	width: 300px;
+	margin-bottom: 20px;
+}
+

@@ -1,0 +1,17 @@
+<!-- Footer -->
+<footer class="py-4 bg-light mt-auto">
+  <div class="container-fluid">
+    <div class="d-flex align-items-center justify-content-between small">
+      <div class="text-muted">
+        Copyright &copy; Firhan Hardiansyah |
+        Build : Selasa, ‎05 ‎Mei ‎2020, ‏‎05.40.55
+      </div>
+      <div>
+        <a href="#">Privacy Policy</a>
+        &middot;
+        <a href="#">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- End Footer -->
