@@ -20,12 +20,14 @@ function kategori($kategori_id = false)
     <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
       <div class="sb-sidenav-menu">
         <div class="nav">
-          <div class="sb-sidenav-menu-heading">Kategori</div>';
+          <div class="sb-sidenav-menu-heading">Kategori</div>
+            <ul>';
             while ($row = mysqli_fetch_assoc($query)) {
-              $string .= "<a class='nav-link' href='".BASE_URL."index.php?kategori_id=$row[kategori_id]''> $row[kategori]</a>";
+              $string .= "<li><a class='nav-link' href='".BASE_URL."index.php?kategori_id=$row[kategori_id]''> $row[kategori]</a></li>";
             }
   $string .= 
-        '</div>
+        '</ul>
+        </div>
       </div>
     </nav>
   </div>';
