@@ -10,19 +10,27 @@
         <div class="mt-3">
           <div class="card card-shadow">
             <?php
-            $barang_id = $_GET['barang_id'];
+            $ebook_id = $_GET['ebook_id'];
 
-            $query_barang = mysqli_query($con, "SELECT * FROM barang WHERE barang_id='$barang_id' AND status='on'");
-            $row = mysqli_fetch_assoc($query_barang);
+            $query_ebook = mysqli_query($con, "SELECT * FROM ebook WHERE ebook_id='$ebook_id' AND status='on'");
+            $row = mysqli_fetch_assoc($query_ebook);
             ?>
             <div class="row">
               <div class="col-lg-4">
-                <img class="card-img-top mt-4 mb-4 img-content" src="<?= BASE_URL ?>assets/img/barang/<?= $row['gambar'] ?>" alt="Card image cap">
+                <img class="card-img-top mt-4 mb-4 img-detail" src="<?= BASE_URL ?>assets/img/ebook/<?= $row['gambar'] ?>" alt="Card image cap">
               </div>
-              <div class="col-lg-8">
+              <div class="col-lg-8">  
                 <div class="card-body">
-                  <h2 class="card-title"><?= $row['nama_barang'] ?></h2>
+                  <h2 class="card-title"><?= $row['nama_ebook'] ?></h2>
                   <hr>
+                  <div class="row">
+                    <div class="col-lg-2">
+                      <h6 class="text-secondary">Penulis</h6>
+                    </div>
+                    <div class="col-lg-10">
+                      <h4 class="card-title text-dark"><?= $row['penulis'] ?></h4>
+                    </div>
+                  </div>
                   <div class="row">
                     <div class="col-lg-2">
                       <h6 class="text-secondary">Harga</h6>
@@ -31,19 +39,11 @@
                       <h3 class="card-title text-danger"><?= rupiah($row['harga']) ?></h3>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-lg-2">
-                      <h6 class="text-secondary">Stok Barang</h6>
-                    </div>
-                    <div class="col-lg-10">
-                      <h4 class="card-title"><?= $row['stok'] ?></h4>
-                    </div>
-                  </div>
                   <hr>
                   <div class="row" style="margin-top: 5%">
                     <div class="col">
                       <a href="#" class="btn btn-outline-primary col">
-                        Detail
+                        Baca Selengkapnya . . .
                       </a>
                     </div>
                     <div class="col">
@@ -58,9 +58,9 @@
           </div>
           <div class="mt-4 mb-4 card card-shadow">
             <div class="card-body">
-              <h5>Deskripsi Produk</h5>
+              <h5>Deskripsi E-Book</h5>
               <hr>
-              <p class="card-text"><?= $row['spesifikasi'] ?></p>
+              <p class="card-text"><?= $row['deskripsi'] ?></p>
             </div>
           </div>
         </div>
