@@ -5,7 +5,6 @@
     <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
       <div class="sb-sidenav-menu">
         <div class="nav">
-          <div class="sb-sidenav-menu-heading">Kategori</div>
           <?= kategori($kategori_id) ?>
         </div>
       </div>
@@ -18,7 +17,7 @@
     <main>
       <div class="container">
         <!-- Banner -->
-        <div class="slides mt-3 mb-4" id="slides">
+        <div class="" id="slides2">
           <?php
           $query_banner = mysqli_query($con, "SELECT * FROM banner WHERE status='on' ORDER BY banner_id DESC LIMIT 3");
 
@@ -27,7 +26,8 @@
               <img src="<?= BASE_URL ?>assets/img/slide/<?= $row['gambar'] ?>" style="width: 100%">
             </a>
           <?php endwhile ?>
-
+          <a href="#" class="slidesjs-previous slidesjs-navigation mb-3"><i class="icon-chevron-left"></i></a>
+          <a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right"></i></a>
         </div>
         <!-- End Banner -->
 
@@ -49,10 +49,10 @@
               <div class="card-body">
                 <h6 class="card-title"><?= $row['nama_ebook'] ?></h6>
                 <h6 class="card-text text-danger"><?= rupiah($row['harga']) ?></h6>
-                <p class="card-text text-secondary">Stok Barang : <?= $row['stok'] ?></p>
-                <hr>
+              </div>
+              <div class="card-footer">
                 <a href="#" class="btn btn-outline-primary col">
-                  <i class="fas fa-plus"></i> Keranjang
+                <i class="fas fa-cart-plus"></i> Keranjang
                 </a>
               </div>
             </div>
