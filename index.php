@@ -37,13 +37,14 @@ $level    = isset($_SESSION['level'])   ? $_SESSION['level']   : false;
     <div class="container-fluid">
       <a class="navbar-brand" href="<?= BASE_URL ?>">
         <img src="<?= BASE_URL . 'assets/img/online-shopping.png' ?>" width="40"> EBook Store</a>
-
-      <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
-      <div class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
-
-      </div>
+    
+      <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button> 
+      <div class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0"></div>
       <!-- Navbar-->
       <ul class="navbar-nav ml-auto ml-md-0">
+        <a href="" class="btn btn-warning mr-3" style="">
+          <i class="fas fa-shopping-basket"></i>
+        </a>
         <?php
         if ($user_id) {
           echo '<div class="btn-group" role="group">
@@ -76,7 +77,7 @@ $level    = isset($_SESSION['level'])   ? $_SESSION['level']   : false;
   }
   ?>
   <!-- End Content -->
-
+  
   <script src="<?= BASE_URL . 'assets/js/jquery_3_4_1.min.js' ?>"></script>
   <script src="<?= BASE_URL . 'assets/bootstrap/js/bootstrap.min.js' ?>"></script>
   <script src="<?= BASE_URL . 'assets/js/scripts.js' ?>"></script>
@@ -91,15 +92,13 @@ $level    = isset($_SESSION['level'])   ? $_SESSION['level']   : false;
     $(document).ready(function() {
       $('#myTable').DataTable();
     });
-    $(function() {
-      $('#slides').slidesjs({
-        height: 350,
-        play: {
-          auto: true,
-          interval: 3000
-        },
-        navigation: false
-      });
+    $('#slides2').slidesjs({
+      height: 240,
+      play: {
+        auto: true,
+        interval: 3000
+      },
+      navigation: false
     });
   </script>
 
