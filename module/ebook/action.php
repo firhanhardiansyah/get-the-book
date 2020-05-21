@@ -7,7 +7,6 @@
   $kategori_id = $_POST['kategori_id'];
   $penulis   = $_POST['penulis'];
   $deskripsi   = $_POST['deskripsi'];
-  $stok        = $_POST['stok'];
   $harga       = $_POST['harga'];
   $status      = $_POST['status'];
   $button      = $_POST['button'];
@@ -23,8 +22,8 @@
   }
 
   if ($button == "Tambah") {
-    mysqli_query($con, "INSERT INTO ebook (nama_ebook, kategori_id, penulis, deskripsi, gambar, stok, harga, status)
-                                    VALUES ('$nama_ebook', '$kategori_id', '$penulis','$deskripsi', '$nama_file', '$stok', '$harga', '$status')");
+    mysqli_query($con, "INSERT INTO ebook (nama_ebook, kategori_id, penulis, deskripsi, gambar, harga, status)
+                                    VALUES ('$nama_ebook', '$kategori_id', '$penulis','$deskripsi', '$nama_file', '$harga', '$status')");
   } else if ($button == "Update") {
     $ebook_id = $_GET['ebook_id'];
     
@@ -32,7 +31,6 @@
                                           nama_ebook = '$nama_ebook',
                                           penulis = '$penulis',
                                           deskripsi = '$deskripsi',
-                                          stok        = '$stok', 
                                           harga       = '$harga', 
                                           status      = '$status'
                                           $update_gambar

@@ -4,7 +4,6 @@ $nama_ebook = "";
 $penulis = "";
 $kategori_id = "";
 $deskripsi = "";
-$stok = "";
 $harga = "";
 $status = "";
 $gambar = "";
@@ -20,7 +19,6 @@ if ($ebook_id) {
   $kategori_id = $row['kategori_id'];
   $deskripsi   = $row['deskripsi'];
   $gambar      = $row['gambar'];
-  $stok        = $row['stok'];
   $harga       = $row['harga'];
   $status      = $row['status'];
   $button      = "Update";
@@ -69,10 +67,6 @@ if ($ebook_id) {
       <div class="form-group">
         <label>Deskripsi</label>
         <textarea name="deskripsi" id="" cols="30" rows="5" class="form-control textarea ckeditor" id="ckedtor"><?= $deskripsi ?></textarea>
-      </div>
-      <div class="form-group">
-        <label>Stok</label>
-        <input type="text" name="stok" class="form-control" value="<?= $stok ?>">
       </div>
       <div class="form-group">
         <label>Harga</label>
