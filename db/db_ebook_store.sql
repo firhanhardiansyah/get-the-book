@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2020 at 03:24 AM
+-- Generation Time: May 22, 2020 at 06:36 AM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.7
 
@@ -58,7 +58,6 @@ CREATE TABLE `ebook` (
   `deskripsi` text NOT NULL,
   `gambar` varchar(300) NOT NULL,
   `harga` int(10) NOT NULL,
-  `stok` tinyint(1) NOT NULL,
   `status` enum('on','off') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -66,14 +65,16 @@ CREATE TABLE `ebook` (
 -- Dumping data for table `ebook`
 --
 
-INSERT INTO `ebook` (`ebook_id`, `kategori_id`, `nama_ebook`, `penulis`, `deskripsi`, `gambar`, `harga`, `stok`, `status`) VALUES
-(1, 1, 'Light Novel Naruto: Tale Of The Utterly Gutsy Shinobi', 'MASASHI KISHIMOTO & AKIRA HIGASHIYAMA', '<p>Apakah arti `ninja`? Naruto Musasabi, seorang ninja Desa Shuku, percaya bahwa ninja adalah orang yang bisa bertahan. Saat tersiar kabar bahwa sebuah kinjutsu mematikan bernama Gukoizan telah disempurnakan dan menghancurkan sebuah desa, salah satu rekannya, Renge, dikabarkan telah kabur dari Shuku dan terlibat dalam kinjutsu itu. Bersama dengan seorang rekan lainnya, Tsuyu, Naruto pergi dalam misi mengejar Renge dan membawanya kembali ke desa. Akankah sang ninja penuh keberanian itu bisa mempertahankan kepercayaannya sampai akhir di tengah kemelut yang dihadapinya?</p>', 'Light_Novel_Naruto_Tale_of_the_Utterly_Gutsy_Shinobi__w414_hauto.jpg', 74000, 12, 'on'),
-(2, 2, 'Antipanik! Buku Panduan Virus Corona', 'dr. Jaka Pradipta, Sp.P dan dr. Ahmad Muslim Nazaruddin, Sp.P', '<p>Tepat 11 Maret 2020, WHO secara resmi menyatakan COVID-19 sebagai pandemi. Pandemi adalah wabah atau penyakit yang berjangkit secara bersamaan dengan penyebaran secara global di seluruh dunia. Semua warga dunia dihimbau agar lebih meningkatkan kewaspadaan dalam mencegah maupun menangani COVID-19. Anda tidak perlu panik! Sejatinya penyakit ini dapat sembuh dengan imunitas tubuh yang baik. Langkah perlindungan yang menjadi tanggung jawab kita adalah lindungi diri sendiri, lindungi keluarga kita, dan lindungi rumah kita dengan berbagai cara yang dapat Anda baca selengkapnya dalam buku ini.</p>', '9786230017162_ANTIPANIK_Buku_Panduan_Virus_Corona__w414_hauto.jpg', 60000, 20, 'on'),
-(3, 1, 'One Punch Man 20', 'One & Yusuke Murata', '<p>Bahkan menjelang saat-saat penyerbuan pun para Hero level S masih belum bisa sepakat. Kedatangan Sweet Mask yang juga ingin ikut menyerbu malah semakin memperkeruh keadaan. Yang mengingatkan kembali mereka pada kewajiban mereka sebagai Hero adalah King, si manusia terkuat.</p>', '9786230015342_cover_Onepunch_man_20-1__w414_hauto.jpg', 28000, 10, 'on'),
-(4, 1, 'One Piece 92', 'Eiichiro Oda', '<p>Makhluk terkuat muncul! Kaido yang tiba-tiba muncul di hadapan semua orang dengan wujud naga raksasa, menembakkan Boro Breath ke arah Nami dan kawan-kawan! Luffy yang marah karena teman-temannya diserang, menghujani Kaido dengan tinju segenap tenaganya, tapi bagaimana hasilnya? Simak kisah petualangan di lautan, One Piece!!</p>', '9786230014857_Cov_One_Piece_92__w414_hauto.jpg', 22400, 30, 'on'),
-(5, 3, 'Mengupas Rahasia Tersembunyi Photoshop', 'Jubilee Enterprise', '<p>Photoshop memiliki ratusan perintah, menu, dan fitur lain untuk mendukung pekerjaan seorang fotografer, desainer grafis, ilustrator, dan pekerja kreatif lainnya. Di antara ratusan perintah dan puluhan tool serta fitur itu, ada yang jarang dipakai, tidak begitu diketahui penggunaannya, atau sulit dipahami oleh pengguna awam. Padahal jika kita bisa memakainya, pekerjaan akan lebih cepat selesai dengan hasil yang lebih bagus pula. Buku ini secara khusus mengupas perintah, fitur, menu, dan tool Photoshop dengan lebih mendalam, khususnya yang jarang digunakan karena terlalu sulit dipahami. Misalnya apa? Sebut saja, Levels dan Curves. Selain itu, Anda juga akan mempelajari langkah-langkah secara detail bagaimana tool seleksi dan menu Select bekerja untuk mengisolasi objek di dalam kanvas. Jadi, jika Anda sudah merasa jago di bidang Photoshop, mari membaca buku ini untuk menguji kemampuan Anda. Dengan demikian, kemampuan Anda bisa meningkat pesat setelah mengetahui aneka perintah dan fitur yang keren tetapi hanya diketahui oleh pengguna level menengah dan mahir saja. (thinkjubilee.com).</p>', '9786230016172_Cov_Mengupas_Rahasia_Tersembunyi_Photoshop__w414_hauto.jpg', 65000, 20, 'on'),
-(6, 3, 'Belajar Sendiri Adobe Photoshop Cc 2020', 'Jubilee Enterprise', '<p>Photoshop CC 2020 merupakan peranti lunak versi paling mutakhir yang dapat dimanfaatkan untuk pembuatan desain, ilustrasi, dan mengedit foto-foto digital. Buku ini ditulis bagi pengguna pemula yang ingin mempelajari Photoshop. Materi yang disajikan mencakup: &bull; Pengenalan Photoshop CC 2020. &bull; Menggunakan tool-tool standar yang sering digunakan. &bull; Menulis teks di dalam kanvas. &bull; Membuat seleksi dan mengenal Select and Mask. &bull; Pengenalan Layers dan pembuatan layer mask. &bull; Mengenal dan mengoptimalkan Channel untuk seleksi. &bull; Memanfaatkan adjustment layer. &bull; Pengenalan terhadap menu Filters. &bull; Dan sebagainya. Buku ini juga dilengkapi dengan video tutorial-video tutorial yang di-posting di Youtube dan Udemy untuk semua orang. Semakin sering Anda melihat video tutorial, maka semakin canggih pengetahuan Anda dalam dunia desain grafis.</p>', '9786230015830_Cov_Belajar_Sendiri_Adobe_Photoshop__w414_hauto.jpg', 70000, 10, 'on'),
-(7, 4, 'Kartun Fisika (2020)', 'Larry Gonick', '<p>Kamu tidak perlu menjadi ilmuwan untuk mengerti berbagai soal berikut ini atau pun gagasan lain yang lebih rumit, karena Kartun Fisika telah menjabarkan semua bahasan ini: kecepatan, percepatan, ledakan, listrik dan magnet, rangkaian&mdash;bahkan yang sedikit berbau teori relativitas, dan banyak tagi, secara sederhana, jernih, dan tentu saja, dengan ilustrasi yang lucu. Itmu fisika jadi tampak beda! Jika kamu mengira muatan listrik negatif adalah sesuatu yang muncul pada tagihan kartu kredit, jika kamu membayangkan Hukum Ohm menentukan berapa tama kamu harus bermeditasi, dan jika kamu percaya mekanika Newton dapat memperbaiki mobil, kamu perlu Kartun Fisika untuk meluruskan pengertianmu.</p>', 'fisika__w414_hauto.jpg', 75000, 12, 'on');
+INSERT INTO `ebook` (`ebook_id`, `kategori_id`, `nama_ebook`, `penulis`, `deskripsi`, `gambar`, `harga`, `status`) VALUES
+(1, 1, 'Light Novel Naruto: Tale Of The Utterly Gutsy Shinobi', 'MASASHI KISHIMOTO & AKIRA HIGASHIYAMA', '<p>Apakah arti `ninja`? Naruto Musasabi, seorang ninja Desa Shuku, percaya bahwa ninja adalah orang yang bisa bertahan. Saat tersiar kabar bahwa sebuah kinjutsu mematikan bernama Gukoizan telah disempurnakan dan menghancurkan sebuah desa, salah satu rekannya, Renge, dikabarkan telah kabur dari Shuku dan terlibat dalam kinjutsu itu. Bersama dengan seorang rekan lainnya, Tsuyu, Naruto pergi dalam misi mengejar Renge dan membawanya kembali ke desa. Akankah sang ninja penuh keberanian itu bisa mempertahankan kepercayaannya sampai akhir di tengah kemelut yang dihadapinya?</p>', 'Light_Novel_Naruto_Tale_of_the_Utterly_Gutsy_Shinobi__w414_hauto.jpg', 74000, 'on'),
+(2, 2, 'Antipanik! Buku Panduan Virus Corona', 'dr. Jaka Pradipta, Sp.P dan dr. Ahmad Muslim Nazaruddin, Sp.P', '<p>Tepat 11 Maret 2020, WHO secara resmi menyatakan COVID-19 sebagai pandemi. Pandemi adalah wabah atau penyakit yang berjangkit secara bersamaan dengan penyebaran secara global di seluruh dunia. Semua warga dunia dihimbau agar lebih meningkatkan kewaspadaan dalam mencegah maupun menangani COVID-19. Anda tidak perlu panik! Sejatinya penyakit ini dapat sembuh dengan imunitas tubuh yang baik. Langkah perlindungan yang menjadi tanggung jawab kita adalah lindungi diri sendiri, lindungi keluarga kita, dan lindungi rumah kita dengan berbagai cara yang dapat Anda baca selengkapnya dalam buku ini.</p>', '9786230017162_ANTIPANIK_Buku_Panduan_Virus_Corona__w414_hauto.jpg', 60000, 'on'),
+(3, 1, 'One Punch Man 20', 'One & Yusuke Murata', '<p>Bahkan menjelang saat-saat penyerbuan pun para Hero level S masih belum bisa sepakat. Kedatangan Sweet Mask yang juga ingin ikut menyerbu malah semakin memperkeruh keadaan. Yang mengingatkan kembali mereka pada kewajiban mereka sebagai Hero adalah King, si manusia terkuat.</p>', '9786230015342_cover_Onepunch_man_20-1__w414_hauto.jpg', 28000, 'on'),
+(4, 1, 'One Piece 92', 'Eiichiro Oda', '<p>Makhluk terkuat muncul! Kaido yang tiba-tiba muncul di hadapan semua orang dengan wujud naga raksasa, menembakkan Boro Breath ke arah Nami dan kawan-kawan! Luffy yang marah karena teman-temannya diserang, menghujani Kaido dengan tinju segenap tenaganya, tapi bagaimana hasilnya? Simak kisah petualangan di lautan, One Piece!!</p>', '9786230014857_Cov_One_Piece_92__w414_hauto.jpg', 22400, 'on'),
+(5, 3, 'Mengupas Rahasia Tersembunyi Photoshop', 'Jubilee Enterprise', '<p>Photoshop memiliki ratusan perintah, menu, dan fitur lain untuk mendukung pekerjaan seorang fotografer, desainer grafis, ilustrator, dan pekerja kreatif lainnya. Di antara ratusan perintah dan puluhan tool serta fitur itu, ada yang jarang dipakai, tidak begitu diketahui penggunaannya, atau sulit dipahami oleh pengguna awam. Padahal jika kita bisa memakainya, pekerjaan akan lebih cepat selesai dengan hasil yang lebih bagus pula. Buku ini secara khusus mengupas perintah, fitur, menu, dan tool Photoshop dengan lebih mendalam, khususnya yang jarang digunakan karena terlalu sulit dipahami. Misalnya apa? Sebut saja, Levels dan Curves. Selain itu, Anda juga akan mempelajari langkah-langkah secara detail bagaimana tool seleksi dan menu Select bekerja untuk mengisolasi objek di dalam kanvas. Jadi, jika Anda sudah merasa jago di bidang Photoshop, mari membaca buku ini untuk menguji kemampuan Anda. Dengan demikian, kemampuan Anda bisa meningkat pesat setelah mengetahui aneka perintah dan fitur yang keren tetapi hanya diketahui oleh pengguna level menengah dan mahir saja. (thinkjubilee.com).</p>', '9786230016172_Cov_Mengupas_Rahasia_Tersembunyi_Photoshop__w414_hauto.jpg', 65000, 'on'),
+(6, 3, 'Belajar Sendiri Adobe Photoshop Cc 2020', 'Jubilee Enterprise', '<p>Photoshop CC 2020 merupakan peranti lunak versi paling mutakhir yang dapat dimanfaatkan untuk pembuatan desain, ilustrasi, dan mengedit foto-foto digital. Buku ini ditulis bagi pengguna pemula yang ingin mempelajari Photoshop. Materi yang disajikan mencakup: &bull; Pengenalan Photoshop CC 2020. &bull; Menggunakan tool-tool standar yang sering digunakan. &bull; Menulis teks di dalam kanvas. &bull; Membuat seleksi dan mengenal Select and Mask. &bull; Pengenalan Layers dan pembuatan layer mask. &bull; Mengenal dan mengoptimalkan Channel untuk seleksi. &bull; Memanfaatkan adjustment layer. &bull; Pengenalan terhadap menu Filters. &bull; Dan sebagainya. Buku ini juga dilengkapi dengan video tutorial-video tutorial yang di-posting di Youtube dan Udemy untuk semua orang. Semakin sering Anda melihat video tutorial, maka semakin canggih pengetahuan Anda dalam dunia desain grafis.</p>', '9786230015830_Cov_Belajar_Sendiri_Adobe_Photoshop__w414_hauto.jpg', 70000, 'on'),
+(7, 4, 'Kartun Fisika (2020)', 'Larry Gonick', '<p>Kamu tidak perlu menjadi ilmuwan untuk mengerti berbagai soal berikut ini atau pun gagasan lain yang lebih rumit, karena Kartun Fisika telah menjabarkan semua bahasan ini: kecepatan, percepatan, ledakan, listrik dan magnet, rangkaian&mdash;bahkan yang sedikit berbau teori relativitas, dan banyak tagi, secara sederhana, jernih, dan tentu saja, dengan ilustrasi yang lucu. Itmu fisika jadi tampak beda! Jika kamu mengira muatan listrik negatif adalah sesuatu yang muncul pada tagihan kartu kredit, jika kamu membayangkan Hukum Ohm menentukan berapa tama kamu harus bermeditasi, dan jika kamu percaya mekanika Newton dapat memperbaiki mobil, kamu perlu Kartun Fisika untuk meluruskan pengertianmu.</p>', 'fisika__w414_hauto.jpg', 75000, 'on'),
+(9, 6, 'Segala-galanya Ambyar', 'Mark Manson', '<p>Apakah kamu merasa kecewa dengan hidupmu? Apakah kamu merasa cemas secara terus-menerus? Apakah kamu merasa bahwa dunia di sekelilingmu buruk dan jahat? Ya, dunia ini memang kacau, dunia ini memang ambyar, tapi itu karena Anda tidak sadar bahwa harapan Anda terlalu disilaukan oleh keinginan-keinginan Anda sendiri yang tidak masuk akal. Jadi, lepaskanlah harapan - harapan itu, jika Anda ingin waras! #AmbyarkanHarapan untuk hidup yang lebih tenang.</p>', '9786020522838_bExJO9f__w414_hauto.jpg', 90000, 'on'),
+(11, 7, 'demo aja', 'udin demo !', '<p>ini hanya untuk demo</p>', 'logo unsika.png', 10, 'on');
 
 -- --------------------------------------------------------
 
@@ -95,7 +96,9 @@ INSERT INTO `kategori` (`kategori_id`, `kategori`, `status`) VALUES
 (1, 'Komik', 'on'),
 (2, 'Kesehatan', 'on'),
 (3, 'Komputer & Teknologi', 'on'),
-(4, 'Pendidikan', 'on');
+(4, 'Pendidikan', 'on'),
+(6, 'Pengembangan Diri', 'on'),
+(7, 'Hanya untuk demo', 'on');
 
 -- --------------------------------------------------------
 
@@ -180,7 +183,8 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`user_id`, `level`, `nama`, `email`, `alamat`, `phone`, `password`, `status`) VALUES
 (1, 'superadmin', 'admin', 'admin@gmail.com', 'jalan menteng', '08123456789', '0192023a7bbd73250516f069df18b500', 'on'),
 (2, 'customer', 'firhan hardiansyah', 'firhan.hardiansyah11@gmail.com', 'jalan jalan', '0821321321', '202cb962ac59075b964b07152d234b70', 'on'),
-(3, 'customer', 'alizar alam', 'alizar@gmail.com', 'bbc', '087321321', '202cb962ac59075b964b07152d234b70', 'on');
+(3, 'customer', 'alizar alam', 'alizar@gmail.com', 'bbc', '087321321', '202cb962ac59075b964b07152d234b70', 'on'),
+(4, 'customer', 'demo', 'demo@gmail.com', 'jalan jalan', '08123321', '202cb962ac59075b964b07152d234b70', 'on');
 
 --
 -- Indexes for dumped tables
@@ -253,13 +257,13 @@ ALTER TABLE `banner`
 -- AUTO_INCREMENT for table `ebook`
 --
 ALTER TABLE `ebook`
-  MODIFY `ebook_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `ebook_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `kategori_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `kategori_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `konfirmasi_pembayaran`
@@ -283,7 +287,7 @@ ALTER TABLE `pesanan`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
