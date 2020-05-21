@@ -42,28 +42,28 @@ $level    = isset($_SESSION['level'])   ? $_SESSION['level']   : false;
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
+          <!-- <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          
+          </li> -->
+
         </ul>
-        <a class="mr-3" href="<?= BASE_URL ?>">
-        <img src="<?= BASE_URL . 'assets/img/icons8-shopping-basket-60.png' ?>" width="35"></a>
 
-        <!-- Menu sidebar akan muncul jika masuk ke MyProfile  -->
-        <?php
-        $filename = "$page.php";
 
-        if (file_exists($filename)) :
-        ?>
-          <button class="btn btn-outline-light mr-3" id="sidebarToggle" href="#"><i class="fas fa-bars"></i> Menu</button>
-        <?php
-        endif
-        ?>
-        <!-- End Menu sidebar akan muncul jika masuk ke MyProfile  -->
 
-        <form class="form-inline my-2 my-lg-0">
+        <div class="form-inline my-2 my-lg-0 float-right">
+          <!-- Keranjang -->
+          <a class="float-left mr-3" href="<?= BASE_URL ?>">
+            <img src="<?= BASE_URL . 'assets/img/icons8-shopping-basket-60.png' ?>" width="35">
+          </a>
+          <!-- End Keranjang -->
           <?php
+          $filename = "$page.php";
+
+          if (file_exists($filename)) :
+          ?>
+            <button class="btn btn-outline-light mr-3" id="sidebarToggle" href="#"><i class="fas fa-bars"></i> Menu</button>
+          <?php
+          endif;
           if ($user_id) {
             echo '<div class="btn-group" role="group">
                     <button id="btnGroupDrop1" type="button" class="btn btn-outline-light dropdown-toggle mr-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -79,7 +79,7 @@ $level    = isset($_SESSION['level'])   ? $_SESSION['level']   : false;
             echo '<a href="' . BASE_URL . 'index.php?page=login" class="btn btn-outline-light mr-3">Login</a>';
           }
           ?>
-        </form>
+        </div>
       </div>
     </div>
   </nav>

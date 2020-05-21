@@ -26,7 +26,7 @@
           $query = mysqli_query($con, "SELECT * FROM kategori WHERE status='on' ");
           while ($row = mysqli_fetch_assoc($query)) :
           ?>
-            <div class="col-lg-3 col-sm-6 mb-3 col-6">
+            <div class="col-xl-3 col-lg-3 col-sm-6 col-md-4 col-6 mb-3">
               <a href="<?= BASE_URL ?>index.php?kategori_id=<?= $row['kategori_id'] ?>" style="text-decoration-line: none">
                 <button class="card card-shadow col" style="border-radius: 20px">
                   <div class="card-body">
@@ -61,7 +61,7 @@
 
           while ($row = mysqli_fetch_assoc($query)) :
           ?>
-            <div class="col-lg-3 col-sm-6 col-md-4 mb-3 col-6">
+            <div class="col-xl-3 col-lg-3 col-sm-6 col-md-4 col-6 mb-3">
               <div class="card card-shadow" style="height: 95%">
                 <a href="<?= BASE_URL ?>index.php?page=detail&ebook_id=<?= $row['ebook_id'] ?>">
                   <img class="mt-2 card-img-top img-content" src="<?= BASE_URL ?>assets/img/ebook/<?= $row['gambar'] ?>" alt="Card image cap">
