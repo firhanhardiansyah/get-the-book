@@ -9,10 +9,10 @@
         $row = mysqli_fetch_assoc($query_ebook);
         ?>
         <div class="row">
-          <div class="col-lg-4">
+          <div class="col-lg-4 col-md-4">
             <img class="card-img-top mt-4 mb-4 img-detail" src="<?= BASE_URL ?>assets/img/ebook/<?= $row['gambar'] ?>" alt="Card image cap">
           </div>
-          <div class="col-lg-8">
+          <div class="col-lg-8 col-md-8">
             <div class="card-body">
               <h2 class="card-title"><?= $row['nama_ebook'] ?></h2>
               <hr>
