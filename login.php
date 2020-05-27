@@ -5,7 +5,7 @@ if ($user_id) {
 ?>
 <style>
   body {
-    background: #2ecc71;
+    background-image: linear-gradient(to right, #4776e6	, #8e54e9);
   }
 </style>
 <div style="margin-top: 5%">
@@ -39,14 +39,14 @@ if ($user_id) {
 
         <div class="form-group">
           <label>Email</label>
-          <input type="email" name="email" id="" class="form-control">
+          <input type="email" name="email" id="" class="form-control" autocomplete="off">
         </div>
         <div class="form-group">
           <label>Password</label>
           <input type="password" name="password" id="" class="form-control">
         </div>
         <div class="form-group">
-          <input type="submit" class="btn btn-success col" value="Masuk">
+          <input type="submit" class="login-btn col" value="Log In">
         </div>
       </div>
     </div>

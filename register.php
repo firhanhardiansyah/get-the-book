@@ -12,7 +12,7 @@ $alamat        =   isset($_GET['alamat']) ? $_GET['alamat'] : false;
 ?>
 <style>
   body {
-    background: #2ecc71;
+    background-image: linear-gradient(to right, #4776e6	, #8e54e9);
   }
 </style>
 <div class="container">
@@ -49,15 +49,15 @@ $alamat        =   isset($_GET['alamat']) ? $_GET['alamat'] : false;
           ?>
           <div class="form-group">
             <label>Nama Lengkap</label>
-            <input type="text" name="nama_lengkap" id="" class="form-control" value="<?= $nama_lengkap ?>">
+            <input type="text" name="nama_lengkap" id="" class="form-control" autocomplete="off" value="<?= $nama_lengkap ?>">
           </div>
           <div class="form-group">
             <label>Email</label>
-            <input type="email" name="email" id="" class="form-control" value="<?= $email ?>">
+            <input type="email" name="email" id="" class="form-control" autocomplete="off" value="<?= $email ?>">
           </div>
           <div class="form-group">
             <label>Nomer Telepon</label>
-            <input type="text" name="phone" id="" class="form-control" value="<?= $phone ?>">
+            <input type="text" name="phone" id="" class="form-control" autocomplete="off" value="<?= $phone ?>">
           </div>
           <div class="form-group">
             <label>Alamat</label>
@@ -72,7 +72,7 @@ $alamat        =   isset($_GET['alamat']) ? $_GET['alamat'] : false;
             <input type="password" name="re_password" id="" class="form-control">
           </div>
           <div class="form-group">
-            <input type="submit" class="btn btn-success col" value="Daftar">
+            <input type="submit" class="login-btn col" value="Daftar">
           </div>
         </div>
       </div>
