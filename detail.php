@@ -40,7 +40,7 @@
                   </a>
                 </div>
                 <div class="col">
-                  <a href="#" class="btn btn-primary col">
+                  <a href="<?= BASE_URL ?>tambah_keranjang.php?ebook_id=<?= $row['ebook_id']?>" class="btn btn-primary col">
                     <i class="fas fa-plus"></i> Keranjang
                   </a>
                 </div>

@@ -12,6 +12,9 @@ $user_id  = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : false;
 $nama     = isset($_SESSION['nama'])    ? $_SESSION['nama']    : false;
 $level    = isset($_SESSION['level'])   ? $_SESSION['level']   : false;
 
+$keranjang    = isset($_SESSION['keranjang'])   ? $_SESSION['keranjang']   : false;
+$total_ebook  = count($keranjang);
+
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +35,7 @@ $level    = isset($_SESSION['level'])   ? $_SESSION['level']   : false;
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-green">
+  <nav class="navbar navbar-expand-lg navbar-expand-md navbar-dark bg-electric-violet card-shadow">
     <div class="container-fluid">
       <a class="navbar-brand" href="<?= BASE_URL ?>">
         <img src="<?= BASE_URL . 'assets/img/icons8-ereader-90.png' ?>" width="50"> EBook Store</a>
@@ -52,8 +55,13 @@ $level    = isset($_SESSION['level'])   ? $_SESSION['level']   : false;
 
         <div class="form-inline my-2 my-lg-0 float-right">
           <!-- Keranjang -->
-          <a class="float-left mr-3" href="<?= BASE_URL ?>">
-            <img src="<?= BASE_URL . 'assets/img/icons8-shopping-basket-60.png' ?>" width="35">
+          <a class="float-left mr-3" href="<?= BASE_URL ?>index.php?page=keranjang">
+            <img src="<?= BASE_URL . 'assets/img/icons8-shopping-basket-60.png' ?>" width="30">
+            <?php
+              if ($total_ebook != 0) {
+                echo '<span class="badge badge-pill badge-danger notif-keranjang">'.$total_ebook.'</span>';
+              }
+            ?>
           </a>
           <!-- End Keranjang -->
           <?php
@@ -99,6 +107,7 @@ $level    = isset($_SESSION['level'])   ? $_SESSION['level']   : false;
   <script src="<?= BASE_URL . 'assets/js/jquery_3_4_1.min.js' ?>"></script>
   <script src="<?= BASE_URL . 'assets/bootstrap/js/bootstrap.min.js' ?>"></script>
   <script src="<?= BASE_URL . 'assets/js/scripts.js' ?>"></script>
+  <script src="<?= BASE_URL . 'assets/js/script-login-regist.js' ?>"></script>
   <script src="<?= BASE_URL . 'assets/js/dataTables/jquery.dataTables.min.js' ?>"></script>
   <script src="<?= BASE_URL . 'assets/js/dataTables/dataTables.bootstrap4.min.js' ?>"></script>
   <script src="<?= BASE_URL . 'assets/js/slidesJS-3/jquery.slides.min.js' ?>"></script>
