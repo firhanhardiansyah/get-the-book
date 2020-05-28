@@ -10,7 +10,7 @@ if ($total_ebook == 0) {
 } else {
   $no = 1;
 ?>
-  <div class="container-fluid mt-3">
+  <div class="container-fluid">
     <div class="table-responsive">
       <table class="table table-hover">
         <thead class="">
@@ -23,36 +23,38 @@ if ($total_ebook == 0) {
         </thead>
         <?php
         $sub_total = 0;
-        foreach ($keranjang as $key => $value) :
-          $ebook_id = $key;
+        if (is_array($keranjang) || is_object($keranjang)) :
+          foreach ($keranjang as $key => $value) :
+            $ebook_id = $key;
 
-          $nama_ebook = $value['nama_ebook'];
-          $gambar = $value['gambar'];
-          $harga = $value['harga'];
-          $sub_total += $harga;
+            $nama_ebook = $value['nama_ebook'];
+            $gambar = $value['gambar'];
+            $harga = $value['harga'];
+            $sub_total += $harga;
         ?>
-          <tr>
-            <td><?= $no ?></td>
-            <td>
-              <div class="row">
-                <div class="col-lg-2 col-md-2">
-                  <img src="<?= BASE_URL ?>assets/img/ebook/<?= $gambar ?>" alt="" style="height: 100px">
+            <tr>
+              <td><?= $no ?></td>
+              <td>
+                <div class="row">
+                  <div class="col-lg-2 col-md-2">
+                    <img src="<?= BASE_URL ?>assets/img/ebook/<?= $gambar ?>" alt="" style="height: 100px">
+                  </div>
+                  <div class="col-lg-10 col-md-10 align-self-center">
+                    <h5 class=""><?= $nama_ebook ?></h5>
+                  </div>
                 </div>
-                <div class="col-lg-10 col-md-10 align-self-center">
-                  <h5 class=""><?= $nama_ebook ?></h5>
-                </div>
-              </div>
-            </td>
-            <td><?= rupiah($harga) ?></td>
-            <td>
-              <a href="<?= BASE_URL ?>remove_item.php?ebook_id=<?= $ebook_id ?>">
-                <div class="badge badge-danger">X</div>
-              </a>
-            </td>
-          </tr>
+              </td>
+              <td><?= rupiah($harga) ?></td>
+              <td>
+                <a href="<?= BASE_URL ?>remove_item.php?ebook_id=<?= $ebook_id ?>">
+                  <div class="badge badge-danger">X</div>
+                </a>
+              </td>
+            </tr>
         <?php
-          $no++;
-        endforeach;
+            $no++;
+          endforeach;
+        endif;
         ?>
         <tfoot>
           <tr>

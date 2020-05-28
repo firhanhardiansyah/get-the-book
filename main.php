@@ -22,6 +22,15 @@
 
         <h4 class="mb-3 mt-3">Kategori Pilihan</h4>
         <div class="row">
+          <div class="col-xl-3 col-lg-3 col-sm-6 col-md-4 col-6 mb-3">
+            <a href="<?= BASE_URL ?>" style="text-decoration-line: none">
+              <button class="card card-shadow col" style="border-radius: 20px">
+                <div class="card-body">
+                  <h6 class="card-text text-left">Semua E-Book</h6>
+                </div>
+              </button>
+            </a>
+          </div>
           <?php
           $query = mysqli_query($con, "SELECT * FROM kategori WHERE status='on' ");
           while ($row = mysqli_fetch_assoc($query)) :
@@ -69,6 +78,11 @@
                 <div class="card-body mb-3">
                   <h5 class="card-title"><?= $row['nama_ebook'] ?></h5>
                   <h6 class="card-text text-danger"><?= rupiah($row['harga']) ?></h6>
+                </div>
+                <div class="card-footer text-center">
+                  <a href="<?= BASE_URL ?>tambah_keranjang.php?ebook_id=<?= $row['ebook_id'] ?>" class="btn btn-primary">
+                    Keranjang
+                  </a>
                 </div>
               </div>
             </div>

@@ -13,8 +13,8 @@ $nama     = isset($_SESSION['nama'])    ? $_SESSION['nama']    : false;
 $level    = isset($_SESSION['level'])   ? $_SESSION['level']   : false;
 
 $keranjang    = isset($_SESSION['keranjang'])   ? $_SESSION['keranjang']   : false;
-$total_ebook  = count($keranjang);
 
+$total_ebook  = count($keranjang);
 ?>
 
 <!DOCTYPE html>
@@ -58,16 +58,17 @@ $total_ebook  = count($keranjang);
           <a class="float-left mr-3" href="<?= BASE_URL ?>index.php?page=keranjang">
             <img src="<?= BASE_URL . 'assets/img/icons8-shopping-basket-60.png' ?>" width="30">
             <?php
-              if ($total_ebook != 0) {
-                echo '<span class="badge badge-pill badge-danger notif-keranjang">'.$total_ebook.'</span>';
-              }
+            if ($total_ebook != 0) {
+              echo '<span class="badge badge-pill badge-danger notif-keranjang">' . $total_ebook . '</span>';
+            }
             ?>
           </a>
           <!-- End Keranjang -->
           <?php
-          $filename = "$page.php";
 
-          if (file_exists($filename)) :
+          $btn_my_profile = "$page.php" == "my_profile.php";
+
+          if ($btn_my_profile) :
           ?>
             <button class="btn btn-outline-light mr-3" id="sidebarToggle" href="#"><i class="fas fa-bars"></i> Menu</button>
           <?php
@@ -92,17 +93,17 @@ $total_ebook  = count($keranjang);
     </div>
   </nav>
 
-  <!-- Content -->
-  <?php
-  $filename = "$page.php";
+    <!-- Content -->
+    <?php
+    $filename = "$page.php";
 
-  if (file_exists($filename)) {
-    include_once($filename);
-  } else {
-    include_once("main.php");
-  }
-  ?>
-  <!-- End Content -->
+    if (file_exists($filename)) {
+      include_once($filename);
+    } else {
+      include_once("main.php");
+    }
+    ?>
+    <!-- End Content -->
 
   <script src="<?= BASE_URL . 'assets/js/jquery_3_4_1.min.js' ?>"></script>
   <script src="<?= BASE_URL . 'assets/bootstrap/js/bootstrap.min.js' ?>"></script>
