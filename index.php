@@ -12,9 +12,9 @@ $user_id  = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : false;
 $nama     = isset($_SESSION['nama'])    ? $_SESSION['nama']    : false;
 $level    = isset($_SESSION['level'])   ? $_SESSION['level']   : false;
 
-$keranjang    = isset($_SESSION['keranjang'])   ? $_SESSION['keranjang']   : false;
+$keranjang    = isset($_SESSION['keranjang'])   ? $_SESSION['keranjang'] : array();
 
-$total_ebook  = count($keranjang);
+$total_buku  = count($keranjang);
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +23,7 @@ $total_ebook  = count($keranjang);
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ebook Store</title>
+  <title>Book Store</title>
   <link rel="stylesheet" href="<?= BASE_URL . 'assets/bootstrap/css/bootstrap.min.css' ?>">
   <link rel="stylesheet" href="<?= BASE_URL . 'assets/css/style.css' ?>">
   <link rel="stylesheet" href="<?= BASE_URL . 'assets/css/styles-admin.css' ?>">
@@ -38,7 +38,7 @@ $total_ebook  = count($keranjang);
   <nav class="navbar navbar-expand-lg navbar-expand-md navbar-dark bg-electric-violet card-shadow">
     <div class="container-fluid">
       <a class="navbar-brand" href="<?= BASE_URL ?>">
-        <img src="<?= BASE_URL . 'assets/img/icons8-ereader-90.png' ?>" width="50"> EBook Store</a>
+        <img src="<?= BASE_URL . 'assets/img/icons8-ereader-90.png' ?>" width="50"> Book Store</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -50,16 +50,13 @@ $total_ebook  = count($keranjang);
           </li> -->
 
         </ul>
-
-
-
         <div class="form-inline my-2 my-lg-0 float-right">
           <!-- Keranjang -->
           <a class="float-left mr-3" href="<?= BASE_URL ?>index.php?page=keranjang">
             <img src="<?= BASE_URL . 'assets/img/icons8-shopping-basket-60.png' ?>" width="30">
             <?php
-            if ($total_ebook != 0) {
-              echo '<span class="badge badge-pill badge-danger notif-keranjang">' . $total_ebook . '</span>';
+            if ($total_buku != 0) {
+              echo '<span class="badge badge-pill badge-danger notif-keranjang">' . $total_buku . '</span>';
             }
             ?>
           </a>

@@ -5,10 +5,10 @@
 
   session_start();
 
-  $ebook_id  = $_GET['ebook_id'];
+  $buku_id  = $_GET['buku_id'];
   $keranjang = $_SESSION['keranjang'];
   
-  unset($keranjang[$ebook_id]);
+  unset($keranjang[$buku_id]);
 
   $_SESSION['keranjang'] = $keranjang;
 

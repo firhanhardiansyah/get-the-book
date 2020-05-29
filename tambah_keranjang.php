@@ -1,18 +1,19 @@
 <?php 
 
-session_start();
-
 include_once("function/koneksi.php");
 include_once("function/helper.php");
 
-$ebook_id = $_GET['ebook_id'];
+session_start();
+
+$buku_id = $_GET['buku_id'];
 $keranjang = isset($_SESSION['keranjang']) ? $_SESSION['keranjang'] : false;
 
-$query = mysqli_query($con, "SELECT nama_ebook, gambar, harga FROM ebook WHERE ebook_id='$ebook_id'");
-$row = mysqli_fetch_assoc($query);
+$query = mysqli_query($con, "SELECT nama_buku, penulis, gambar, harga FROM buku WHERE buku_id='$buku_id'");
+$row   = mysqli_fetch_assoc($query);
 
-$keranjang[$ebook_id] = [
-  "nama_ebook" => $row['nama_ebook'],
+$keranjang[$buku_id] = [
+  "nama_buku" => $row['nama_buku'],
+  "penulis" => $row['penulis'],
   "gambar" => $row['gambar'],
   "harga"  => $row['harga'],
   "quantity" => 1

@@ -22,9 +22,9 @@ if ($user_id) {
               <div class="sb-nav-link-icon"><i class="fas fa-th"></i></div>
               Kategori
             </a>
-            <a <?php if ($module == "barang") echo "class='nav-link active'"; ?> class="nav-link" href="<?= BASE_URL . "index.php?page=my_profile&module=ebook&action=list" ?>">
+            <a <?php if ($module == "buku") echo "class='nav-link active'"; ?> class="nav-link" href="<?= BASE_URL . "index.php?page=my_profile&module=buku&action=list" ?>">
               <div class="sb-nav-link-icon"><i class="fas fa-box"></i></div>
-              Barang
+              Buku
             </a>
             <a <?php if ($module == "kota") echo "class='nav-link active'"; ?> class="nav-link" href="<?= BASE_URL . "index.php?page=my_profile&module=kota&action=list" ?>">
               <div class="sb-nav-link-icon"><i class="fas fa-city"></i></div>
