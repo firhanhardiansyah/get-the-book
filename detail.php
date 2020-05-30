@@ -1,19 +1,19 @@
 <main>
   <div class="container">
     <div class="mt-4">
-      <div class="card card-shadow">
-        <?php
+      <?php
             $buku_id = $_GET['buku_id'];
-
+            
             $query_buku = mysqli_query($con, "SELECT * FROM buku WHERE buku_id='$buku_id' AND status='on'");
             $row = mysqli_fetch_assoc($query_buku);
             ?>
-        <div class="row">
-          <div class="col-lg-4 col-md-4">
-            <img class="card-img-top card card-shadow" src="<?= BASE_URL ?>assets/img/buku/<?= $row['gambar'] ?>"
-              alt="Card image cap">
-          </div>
-          <div class="col-lg-8 col-md-8">
+      <div class="row">
+        <div class="col-lg-4 col-md-4">
+          <img class="card-img-top card card-shadow" src="<?= BASE_URL ?>assets/img/buku/<?= $row['gambar'] ?>"
+            alt="Card image cap">
+        </div>
+        <div class="col-lg-8 col-md-8">
+          <div class="card card-shadow">
             <div class="card-body">
               <h2 class="card-title"><?= $row['nama_buku'] ?></h2>
               <h5 class="card-title text-secondary"><?= $row['penulis'] ?></h5>
@@ -26,7 +26,7 @@
                 <div class="row">
                   <div class="col">
                     <a href="<?= BASE_URL ?>index.php" class="btn btn-outline-primary mr-3 card-shadow"
-                    style="border-radius: 30px; padding: 10px; width: 100%;">
+                      style="border-radius: 30px; padding: 10px; width: 100%;">
                       <i class="fas fa-chevron-left"></i> Kembali
                     </a>
                   </div>

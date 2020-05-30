@@ -70,14 +70,14 @@
           <h5>Alamat Pengiriman</h5>
         </div>
         <div class="card-body">
-          <form action="<?= BASE_URL ?>proses_pemesanan.php" method="post">
+          <form action="<?= BASE_URL ?>proses_pemesanan.php" method="POST">
             <div class="form-group">
               <label>Nama Penerima</label>
               <input type="text" name="nama_penerima" class="form-control" autocomplete="off">
             </div>
             <div class="form-group">
               <label>Nomer Telepon</label>
-              <input type="text" name="nama_penerima" class="form-control" autocomplete="off">
+              <input type="text" name="nomor_telepon" class="form-control" autocomplete="off">
             </div>
             <div class="form-group">
               <label>Alamat</label>
