@@ -26,7 +26,7 @@
             <a href="<?= BASE_URL ?>" style="text-decoration-line: none">
               <button class="card card-shadow col" style="border-radius: 20px">
                 <div class="card-body">
-                  <h6 class="card-text text-left">Semua E-buku</h6>
+                  <h6 class="card-text text-left">Semua Buku</h6>
                 </div>
               </button>
             </a>
