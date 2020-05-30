@@ -8,18 +8,20 @@
             $row = mysqli_fetch_assoc($query_buku);
             ?>
       <div class="row">
-        <div class="col-lg-4 col-md-4">
+        <div class="col-xl-4 col-lg-4 col-md-4 mb-3">
           <img class="card-img-top card card-shadow" src="<?= BASE_URL ?>assets/img/buku/<?= $row['gambar'] ?>"
             alt="Card image cap">
         </div>
-        <div class="col-lg-8 col-md-8">
+        <div class="col-xl-8 col-lg-8 col-md-8">
           <div class="card card-shadow">
             <div class="card-body">
               <h2 class="card-title"><?= $row['nama_buku'] ?></h2>
               <h5 class="card-title text-secondary"><?= $row['penulis'] ?></h5>
-              <h5 class="mt-4 text-secondary">Harga</h5>
+              <hr>
+              <h5 class="text-secondary">Harga</h5>
               <h3 class="card-title text-danger"><?= rupiah($row['harga']) ?></h3>
-              <h5 class="card-title text-secondary mt-5">Deskripsi</h5>
+              <hr>
+              <h5 class="card-title text-secondary">Deskripsi</h5>
               <hr>
               <p class="card-text"><?= $row['deskripsi'] ?></p>
               <div class="mt-5">
