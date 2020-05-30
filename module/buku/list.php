@@ -4,7 +4,8 @@
       <h2><i class="fas fa-box"></i> Data Buku</h2>
     </div>
     <div class="col-lg-6 col-sm-6">
-      <a href="<?= BASE_URL . "index.php?page=my_profile&module=buku&action=form" ?>" class="btn btn-primary mb-4 float-right">Tambah Data Buku</a>
+      <a href="<?= BASE_URL . "index.php?page=my_profile&module=buku&action=form" ?>"
+        class="btn btn-primary mb-4 float-right">Tambah Data Buku</a>
     </div>
   </div>
 </div>
@@ -18,49 +19,52 @@ if (mysqli_num_rows($query_buku) == 0) {
 } else {
 ?>
 
-  <div class="card mb-4">
-    <div class="card-header"><i class="fas fa-table mr-1"></i>Data Buku</div>
-    <div class="card-body">
-      <div class="table-responsive">
-        <table class="table table-bordered" id="myTable" width="100%" cellspacing="0">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Kategori</th>
-              <th>Nama Buku</th>
-              <th>Penulis</th>
-              <th>Harga</th>
-              <th>Stok</th>
-              <th>Status</th>
-              <th>Opsi</th>
-            </tr>
-          </thead>
-          <tbody>
-            <?php
+<div class="card mb-4">
+  <div class="card-header"><i class="fas fa-table mr-1"></i>Data Buku</div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered" id="myTable" width="100%" cellspacing="0">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Kategori</th>
+            <th>Nama Buku</th>
+            <th>Penulis</th>
+            <th>Harga</th>
+            <th>Stok</th>
+            <th>Status</th>
+            <th>Opsi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
             $no = 1;
             while ($data = mysqli_fetch_assoc($query_buku)) :
             ?>
-              <tr>
-                <td><?= $no ?></td>
-                <td><?= $data['kategori'] ?></td>
-                <td><?= $data['nama_buku'] ?></td>
-                <td><?= $data['penulis'] ?></td>
-                <td><?= rupiah($data['harga']) ?></td>
-                <td><?= $data['stok'] ?></td>
-                <td><?= $data['status'] ?></td>
-                <td>
-                  <a href="<?= BASE_URL . "index.php?page=my_profile&module=buku&action=form&buku_id=$data[buku_id]" ?>" class="btn btn-sm btn-warning">Edit</a>
-                </td>
-              </tr>
-            <?php
+          <tr>
+            <td><?= $no ?></td>
+            <td><?= $data['kategori'] ?></td>
+            <td><?= $data['nama_buku'] ?></td>
+            <td><?= $data['penulis'] ?></td>
+            <td><?= rupiah($data['harga']) ?></td>
+            <td><?= $data['stok'] ?></td>
+            <td><?= $data['status'] ?></td>
+            <td>
+              <a href="<?= BASE_URL . "index.php?page=my_profile&module=buku&action=form&buku_id=$data[buku_id]" ?>"
+                class="btn btn-sm btn-warning mb-3 col">Edit</a>
+              <a href="<?= BASE_URL . "module/buku/action.php?button=Delete&buku_id=$data[buku_id]" ?>"
+                class="btn btn-sm btn-danger col">Delete</a>
+            </td>
+          </tr>
+          <?php
               $no++;
             endwhile;
             ?>
-          </tbody>
-        </table>
-      </div>
+        </tbody>
+      </table>
     </div>
   </div>
+</div>
 
 <?php
 }

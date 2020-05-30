@@ -42,6 +42,7 @@ if (mysqli_num_rows($query_kategori) == 0) {
                 <td><?= $data['status'] ?></td>
                 <td>
                   <a href="<?= BASE_URL . "index.php?page=my_profile&module=kategori&action=form&kategori_id=$data[kategori_id]" ?>" class="btn btn-sm btn-warning">Edit</a>
+                  <a href="<?= BASE_URL . "module/kategori/action.php?button=Delete&kategori_id=$data[kategori_id]" ?>" class="btn btn-sm btn-danger">Delete</a>
                 </td>
               </tr>
             <?php

@@ -1,11 +1,15 @@
 <?php
     include("../../function/koneksi.php");
     include("../../function/helper.php");
-     
-    $banner      = $_POST['banner'];
-    $link        = $_POST['link'];
-    $status      = $_POST['status'];
-    $button      = $_POST['button'];
+    
+    $button      = isset($_POST['button']) ? $_POST['button'] : $_GET['button'];
+
+    $banner_id   = isset($_GET['banner_id']) ? $_GET['banner_id'] : "";
+
+    $banner      = isset($_POST['banner']) ? $_POST['banner'] : "";
+    $link        = isset($_POST['link']) ? $_POST['link'] : "";
+    $status      = isset($_POST['status']) ? $_POST['status'] : "";
+    
     $edit_gambar = "";
 	
  
@@ -20,13 +24,13 @@
         mysqli_query($con, "INSERT INTO banner (banner, link, gambar, status)
                                         VALUES ('$banner', '$link', '$nama_file', '$status')");
     } elseif($button == "Update") {
-	    $banner_id = $_GET['banner_id'];
-		
         mysqli_query($con, "UPDATE banner SET banner = '$banner',
                                               link   = '$link',
                                               status ='$status'
 										      $edit_gambar
                                           WHERE banner_id='$banner_id'");
+    } else if ($button == "Delete") {
+        mysqli_query($con, "DELETE FROM banner WHERE banner_id='$banner_id'");
     }
      
     header("location: ".BASE_URL."index.php?page=my_profile&module=banner&action=list");

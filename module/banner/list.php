@@ -44,6 +44,7 @@ if (mysqli_num_rows($query_banner) == 0) {
                 <td><?= $data['status'] ?></td>
                 <td>
                   <a href="<?= BASE_URL . "index.php?page=my_profile&module=banner&action=form&banner_id=$data[banner_id]" ?>" class="btn btn-sm btn-warning">Edit</a>
+                  <a href="<?= BASE_URL . "module/banner/action.php?button=Delete&banner_id=$data[banner_id]" ?>" class="btn btn-sm btn-danger">Delete</a>
                 </td>
               </tr>
             <?php
