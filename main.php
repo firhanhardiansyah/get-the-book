@@ -8,7 +8,7 @@
         <!-- Banner -->
         <div class="" id="slides2">
           <?php
-          $query_banner = mysqli_query($con, "SELECT * FROM banner WHERE status='on' ORDER BY banner_id DESC LIMIT 3");
+          $query_banner = mysqli_query($con, "SELECT * FROM banner WHERE status='on' ORDER BY banner_id ASC LIMIT 3");
 
           while ($row = mysqli_fetch_assoc($query_banner)) : ?>
             <a href="<?= BASE_URL . $row['link'] ?>">
@@ -78,10 +78,10 @@
                 <div class="card-body mb-3">
                   <h6 class="card-title"><?= $row['nama_buku'] ?></h6>
                   <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6 mb-2">
+                    <div class="col-xl-6 col-lg-12 col-md-12 col-sm-6 mb-2">
                       <h6 class="card-text text-danger"><?= rupiah($row['harga']) ?></h6>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="col-xl-6 col-lg-12 col-md-12 col-sm-6">
                       <h6 class="card-text text-secondary">Stok : <?= $row['stok'] ?></h6>
                     </div>
                   </div>

@@ -17,3 +17,7 @@
 	vertical-align: top;
 	margin-left: -13px;
 }
+.btn-rounded {
+	border-radius: 30px;
+	padding: 10px;
+}

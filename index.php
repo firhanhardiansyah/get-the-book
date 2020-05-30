@@ -38,7 +38,7 @@ $total_buku  = count($keranjang);
   <nav class="navbar navbar-expand-lg navbar-expand-md navbar-dark bg-electric-violet card-shadow">
     <div class="container-fluid">
       <a class="navbar-brand" href="<?= BASE_URL ?>">
-        <img src="<?= BASE_URL . 'assets/img/icons8-ereader-90.png' ?>" width="50"> Book Store</a>
+        <img src="<?= BASE_URL . 'assets/img/icons8-ereader-90.png' ?>" width="50"> Get The Book</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -118,7 +118,7 @@ $total_buku  = count($keranjang);
       $('#myTable').DataTable();
     });
     $('#slides2').slidesjs({
-      height: 240,
+      height: 450,
       play: {
         auto: true,
         interval: 3000
