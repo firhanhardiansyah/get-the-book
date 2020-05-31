@@ -70,7 +70,7 @@
 
           while ($row = mysqli_fetch_assoc($query)) :
           ?>
-            <div class="col-xl-3 col-lg-3 col-sm-6 col-md-4 col-6 mb-3">
+            <div class="col-xl-3 col-lg-3 col-sm-6 col-md-4 col-12 mb-3">
               <div class="card card-shadow" style="height: 95%">
                 <a href="<?= BASE_URL ?>index.php?page=detail&buku_id=<?= $row['buku_id'] ?>">
                   <img class="mt-2 card-img-top img-content" src="<?= BASE_URL ?>assets/img/buku/<?= $row['gambar'] ?>" alt="Card image cap">
@@ -87,8 +87,8 @@
                   </div>
                 </div>
                 <div class="card-footer text-center">
-                  <a href="<?= BASE_URL ?>tambah_keranjang.php?buku_id=<?= $row['buku_id'] ?>" class="btn btn-primary">
-                    Keranjang
+                  <a href="<?= BASE_URL ?>tambah_keranjang.php?buku_id=<?= $row['buku_id'] ?>" class="btn btn-primary" style="border-radius: 30px; padding: 10px; width: 100%;"> 
+                    <img src="<?= BASE_URL . 'assets/img/icons8-shopping-basket-60.png' ?>" width="20"> Keranjang
                   </a>
                 </div>
               </div>

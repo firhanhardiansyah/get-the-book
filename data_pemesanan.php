@@ -1,12 +1,6 @@
 <?php
 
-  if ($user_id == false) {
-    $_SESSION['proses_pemesanan'] = true;
-
-    header("Location: ".BASE_URL."index.php?page=login");
-    exit;
-  }
-
+  if ($user_id == true) {
 ?>
 <div class="container pt-4">
   <div class="row">
@@ -40,13 +34,13 @@
                   $total = $quantity * $harga;
                   $sub_total += $total;
                 ?>
-                  <tr>
-                    <td><?= $no ?></td>
-                    <td><?= $nama_buku ?></td>
-                    <td><?= $quantity ?></td>
-                    <td><?= rupiah($harga) ?></td>
-                    <td><?= rupiah($total) ?></td>
-                  </tr>
+                <tr>
+                  <td><?= $no ?></td>
+                  <td><?= $nama_buku ?></td>
+                  <td><?= $quantity ?></td>
+                  <td><?= rupiah($harga) ?></td>
+                  <td><?= rupiah($total) ?></td>
+                </tr>
                 <?php $no++;
                 endforeach ?>
               </tbody>
@@ -90,13 +84,14 @@
                 $query = mysqli_query($con, "SELECT * FROM kota");
 
                 while ($row = mysqli_fetch_assoc($query)) : ?>
-                  <option value="<?= $row['kota_id'] ?>"><?= $row['kota']?> ( <?= rupiah($row['tarif']) ?> )</option>
+                <option value="<?= $row['kota_id'] ?>"><?= $row['kota']?> ( <?= rupiah($row['tarif']) ?> )</option>
                 <?php endwhile ?>
               </select>
             </div>
             <div class="row mt-4">
               <div class="col">
-                <a href="<?= BASE_URL ?>index.php?page=keranjang" class="btn btn-primary mr-3 " style="border-radius: 30px; padding: 10px; width: 100%;">
+                <a href="<?= BASE_URL ?>index.php?page=keranjang" class="btn btn-primary mr-3 "
+                  style="border-radius: 30px; padding: 10px; width: 100%;">
                   <i class="fas fa-chevron-left"></i> Kembali
                 </a>
               </div>
@@ -113,8 +108,22 @@
   </div>
 
 </div>
+<?php
+  } else {
+    $_SESSION['proses_pemesanan'] = true;
+?>
+  <div class="container pt-4">
+    <h3>Harus login terlebih dahulu untuk melanjutkan pembayaran . . .</h3>
+  </div>
+<?php
+    header("Location:". BASE_URL . "index.php?page=login");;
+    exit;
+
+?>
+
 <!-- Footer -->
 <?php
+}
 require_once("footer.php");
 ?>
 <!-- End Footer -->

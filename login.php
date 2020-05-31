@@ -15,7 +15,7 @@ if ($user_id) {
     $notif = isset($_GET['notif']) ? $_GET['notif'] : false;
     ?>
 
-    <div class="card card-login">
+    <div class="card card-login col-xl-4 col-lg-5 col-md-6 col-sm-8 col-11">
       <div class="card-body">
         <h4 class="card-title">Login</h4>
         <hr>

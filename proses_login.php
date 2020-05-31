@@ -20,9 +20,11 @@
 
     // Jika user melakukan pembayaran tapi belum memasukan akun, setelah login makan akan langsung ke sini 
     if (isset($_SESSION['proses_pemesanan'])) {
+      unset($_SESSION['proses_pemesanan']);
       header("Location:". BASE_URL . "index.php?page=data_pemesanan");
     } else { 
       header("Location:". BASE_URL . "index.php?page=my_profile&module=pesanan&action=list");
+      // header("Location:". BASE_URL . "index.php");
     }
     
   } else {

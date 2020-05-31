@@ -36,7 +36,7 @@ if ($total_buku == 0) {
           <tr>
             <td>
               <div class="row">
-                <div class="col-lg-2 col-md-2 text-center">
+                <div class="col-lg-2 col-md-2 text-center mb-3">
                   <img src="<?= BASE_URL ?>assets/img/buku/<?= $gambar ?>" alt="" style="height: 100px">
                 </div>
                 <div class="col-lg-10 col-md-10 align-self-center">
@@ -75,16 +75,20 @@ if ($total_buku == 0) {
       </div>
     </div>
   </div>
-  <div class="row mt-4">
-    <div class="col">
-      <a href="<?= BASE_URL ?>index.php" class="btn btn-primary mr-3 card-shadow" style="border-radius: 30px; padding: 10px; width: 30%;">
-        <i class="fas fa-chevron-left"></i> Kembali Belanja
-      </a>
-    </div>
-    <div class="col">
-      <a href="<?= BASE_URL ?>index.php?page=data_pemesanan" class="btn btn-success float-right card-shadow"  style="border-radius: 30px; padding: 10px; width: 30%;">
-        Pembayaran <i class="fas fa-chevron-right"></i>
-      </a>
+  <div class="mt-4">
+    <div class="row">
+      <div class="col col-xl-6 col-lg-6 col-sm-6">
+        <a href="<?= BASE_URL ?>index.php" class="btn btn-primary mr-3 card-shadow mb-4 col-xl-4 col-lg-4 col-md-6"
+          style="border-radius: 30px; padding: 10px; width: 100%;">
+          <i class="fas fa-chevron-left"></i> Kembali Belanja
+        </a>
+      </div>
+      <div class="col col-xl-6 col-lg-6 col-sm-6">
+        <a href="<?= BASE_URL ?>index.php?page=data_pemesanan" class="btn btn-success float-right card-shadow col-xl-4 col-lg-4 col-md-6"
+          style="border-radius: 30px; padding: 10px; width: 100%;">
+          Pembayaran <i class="fas fa-chevron-right"></i>
+        </a>
+      </div>
     </div>
   </div>
 </div>

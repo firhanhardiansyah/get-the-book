@@ -18,7 +18,7 @@ $alamat        =   isset($_GET['alamat']) ? $_GET['alamat'] : false;
 <div class="container">
   <div class="" style="margin-top: 5%; margin-bottom: 5%;">
     <form action="<?= BASE_URL . 'proses_register.php' ?>" method="POST">
-      <div class="card card-register card-shadow">
+      <div class="card card-register card-shadow col-xl-6 col-lg-5 col-md-8 col-sm-12 col-11">
         <div class="card-body">
           <h4 class="card-title">Daftar</h4>
           <hr>
