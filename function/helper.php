@@ -1,7 +1,6 @@
 <?php
 
-// define("BASE_URL", "http://localhost/book-store/");
-define("BASE_URL", "https://deadliners.my.id/");
+define("BASE_URL", "http://localhost/book-store/");
 
 function rupiah($nilai = 0)
 {
