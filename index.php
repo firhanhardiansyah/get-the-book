@@ -31,33 +31,37 @@ $total_buku  = count($keranjang);
   <link rel="stylesheet" href="<?= BASE_URL . 'assets/css/dataTables.bootstrap4.min.css' ?>">
   <link rel="stylesheet" href="<?= BASE_URL . 'assets/css/banner.css' ?>">
   <link rel="stylesheet" href="<?= BASE_URL . 'assets/css/style-content.css' ?>">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-expand-md navbar-dark bg-electric-violet card-shadow">
     <div class="container-fluid">
+      <!-- Brand -->
       <a class="navbar-brand" href="<?= BASE_URL ?>">
-        <img src="<?= BASE_URL . 'assets/img/icons8-ereader-90.png' ?>" width="50"> Get The Book</a>
-      <!-- Menu Side bar -->
-      <?php
-      $btn_my_profile = "$page.php" == "my_profile.php";
-      if ($btn_my_profile) :
-      ?>
-        <button class="btn btn-outline-light float-right" id="sidebarToggle" href="#">Menu</button>
-      <?php endif ?>
-      <!-- End Menu Side bar -->
+        <div class="row no-gutters">
+          <div class="col mr-2">
+            <img src="<?= BASE_URL . 'assets/img/icons8-book-stack-100.png' ?>" width="50">
+          </div>
+          <div class="col">
+            <h3 class="mt-2" style="font-family: 'Dancing Script', cursive;"> Get The Book </h3>
+          </div>
+        </div>
+      </a>
+      <!-- End Brand -->
+
+      <!-- Button akan tampil jika dilayar hp atau tablet -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <!-- End Button -->
 
-
+      <!-- Menu -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
         </ul>
-
-
-        <div class="float-right form-inline my-lg-0 mb-2">
+        <div class="float-right form-inline my-lg-0 mb-2 mt-3">
           <!-- Keranjang -->
           <a class="mr-3" href="<?= BASE_URL ?>index.php?page=keranjang">
             <img src="<?= BASE_URL . 'assets/img/icons8-shopping-basket-60.png' ?>" width="30">
@@ -68,6 +72,14 @@ $total_buku  = count($keranjang);
             ?>
           </a>
           <!-- End Keranjang -->
+          <!-- Menu Side bar -->
+          <?php
+          $btn_my_profile = "$page.php" == "my_profile.php";
+          if ($btn_my_profile) :
+          ?>
+            <button class="btn btn-outline-light mr-3" id="sidebarToggle" href="#">Menu</button>
+          <?php endif ?>
+          <!-- End Menu Side bar -->
           <div class="float-right">
             <?php
             if ($user_id) {
@@ -88,6 +100,7 @@ $total_buku  = count($keranjang);
           </div>
         </div>
       </div>
+      <!-- Menu -->
     </div>
   </nav>
 
