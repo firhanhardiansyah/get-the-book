@@ -7,9 +7,8 @@
         Build : Selasa, ‎05 ‎Mei ‎2020, ‏‎05.40.55
       </div>
       <div>
-        <a href="#">Privacy Policy</a>
+        <a href="#">Tentang Apilkasi</a>
         &middot;
-        <a href="#">Terms &amp; Conditions</a>
       </div>
     </div>
   </div>

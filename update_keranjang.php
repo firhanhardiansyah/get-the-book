@@ -10,7 +10,7 @@
   $query = mysqli_query($con, "SELECT stok FROM buku WHERE buku_id='$buku_id'");
   $row = mysqli_fetch_array($query);
 
-  if ($row['stok'] > $value) {
+  if ($row['stok'] >= $value) {
     $status = true;
 
     session_start();
