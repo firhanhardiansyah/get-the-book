@@ -78,7 +78,8 @@
           <p class="card-text">Silahkan lakukan pembayaran ke Bank Toyib</p>
           <p class="card-text">No Rekening : 0000-1234-8899 <br> (A/N Deadliners)</p>
           <p class="card-text">Setelah melakukan pembayaran <br> Silahkan lakukan konfirmasi</p>
-          <a href="<?= BASE_URL ?>index.php?page=my_profile&module=pesanan&action=konfirmasi_pembayaran&pesanan_id=<?= $pesanan_id ?>" class="btn btn-success card-shadow" style="border-radius: 30px; padding: 10px; width: 100%;">Konfirmasi</a>
+          <a href="<?= BASE_URL ?>index.php?page=my_profile&module=pesanan&action=konfirmasi_pembayaran&pesanan_id=<?= $pesanan_id ?>"
+            class="btn btn-success card-shadow" style="border-radius: 30px; padding: 10px; width: 100%;">Konfirmasi</a>
         </div>
       </div>
     </div>
@@ -90,16 +91,17 @@
       <h5>Detail Pemesanan</h5>
     </div>
     <div class="card-body">
-      <table class="table">
-        <thead>
-          <th>#</th>
-          <th>Nama Buku</th>
-          <th>Qty</th>
-          <th>Harga</th>
-          <th>Total</th>
-        </thead>
-        <tbody>
-          <?php 
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <th>#</th>
+            <th>Nama Buku</th>
+            <th>Qty</th>
+            <th>Harga</th>
+            <th>Total</th>
+          </thead>
+          <tbody>
+            <?php 
           $query_detail_pemesanan = mysqli_query($con, "SELECT pesanan_detail.*, buku.nama_buku FROM pesanan_detail JOIN buku ON pesanan_detail.buku_id=buku.buku_id WHERE pesanan_detail.pesanan_id='$pesanan_id'");
           
           $no = 1;
@@ -109,37 +111,38 @@
             $total = $row_detail_pemesanan['quantity'] * $row_detail_pemesanan['harga'];
             $sub_total += $total;
         ?>
-          <tr>
-            <td><?= $no ?></td>
-            <td><?= $row_detail_pemesanan['nama_buku'] ?></td>
-            <td><?= $row_detail_pemesanan['quantity'] ?></td>
-            <td><?= rupiah($row_detail_pemesanan['harga']) ?></td>
-            <td><?= rupiah($total) ?></td>
-          </tr>
-          <?php
+            <tr>
+              <td><?= $no ?></td>
+              <td><?= $row_detail_pemesanan['nama_buku'] ?></td>
+              <td><?= $row_detail_pemesanan['quantity'] ?></td>
+              <td><?= rupiah($row_detail_pemesanan['harga']) ?></td>
+              <td><?= rupiah($total) ?></td>
+            </tr>
+            <?php
           $no++;
           endwhile;
 
           $sub_total += $tarif;
         ?>
-        </tbody>
-        <tfoot>
-          <tr>
-            <th></th>
-            <th>Biaya Pengiriman</th>
-            <th></th>
-            <th></th>
-            <th><?= rupiah($tarif) ?></th>
-          </tr>
-          <tr>
-            <th></th>
-            <th>Sub Total</th>
-            <th></th>
-            <th></th>
-            <th><?= rupiah($sub_total) ?></th>
-          </tr>
-        </tfoot>
-      </table>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th></th>
+              <th>Biaya Pengiriman</th>
+              <th></th>
+              <th></th>
+              <th><?= rupiah($tarif) ?></th>
+            </tr>
+            <tr>
+              <th></th>
+              <th>Sub Total</th>
+              <th></th>
+              <th></th>
+              <th><?= rupiah($sub_total) ?></th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
     </div>
   </div>
 </div>

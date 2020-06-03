@@ -23,18 +23,15 @@
           <input type="date" name="tanggal_transfer" class="form-control" autocomplete="off">
         </div>
         <div class="mt-4 row">
-          <div class="col col-xl-6 col-lg-6 col-sm-6">
+          <div class="col-6 col-xl-6 col-lg-6 col-sm-6">
             <a href="<?= BASE_URL ?>index.php?page=my_profile&module=pesanan&action=detail&pesanan_id=<?= $pesanan_id ?>" class="btn btn-primary mr-3 card-shadow mb-4 col-xl-4 col-lg-4 col-md-6"
               style="border-radius: 30px; padding: 10px; width: 100%;">
-              <i class="fas fa-chevron-left"></i> Cek Kembali
+              Kembali
             </a>
           </div>
-          <div class="col col-xl-6 col-lg-6 col-sm-6">
-            <a href="<?= BASE_URL ?>index.php?page=data_pemesanan"
-              class="btn btn-success float-right card-shadow col-xl-4 col-lg-4 col-md-6"
+          <div class="col-6 col-xl-6 col-lg-6 col-sm-6">
+            <input type="submit" value="Konfirmasi" name="button" class="btn btn-success float-right card-shadow col-xl-4 col-lg-4 col-md-6"
               style="border-radius: 30px; padding: 10px; width: 100%;">
-              Pembayaran <i class="fas fa-chevron-right"></i>
-            </a>
           </div>
         </div>
       </form>
