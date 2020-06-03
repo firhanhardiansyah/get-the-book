@@ -34,3 +34,8 @@ function kategori($kategori_id = false)
 
   return  $string;
 }
+
+$array_status_pesanan[0] = "Belum Pembayaran";
+$array_status_pesanan[1] = "Pembayaran Sedang Di Proses";
+$array_status_pesanan[2] = "Pembayaran Berhasil";
+$array_status_pesanan[3] = "Pembayaran Gagal";
