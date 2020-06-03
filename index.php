@@ -64,7 +64,7 @@ $total_buku  = count($keranjang);
         </ul>
         <div class="float-right form-inline my-lg-0 mb-2 mt-3">
           <!-- Keranjang -->
-          <a class="mr-3" href="<?= BASE_URL ?>index.php?page=keranjang">
+          <a class="mr-3 mb-1 " href="<?= BASE_URL ?>index.php?page=keranjang">
             <img src="<?= BASE_URL . 'assets/img/icons8-shopping-basket-60.png' ?>" width="30">
             <?php
             if ($total_buku != 0) {
@@ -78,17 +78,17 @@ $total_buku  = count($keranjang);
           $btn_my_profile = "$page.php" == "my_profile.php";
           if ($btn_my_profile) :
           ?>
-            <button class="btn btn-outline-light mr-3" id="sidebarToggle" href="#">Menu</button>
+            <button class="btn btn-outline-light mb-1 mr-3" id="sidebarToggle" href="#">Menu</button>
           <?php endif ?>
           <!-- End Menu Side bar -->
           <div class="float-right">
             <?php
             if ($user_id) {
               echo '<div class="btn-group" role="group">
-                    <button id="btnGroupDrop1" type="button" class="btn btn-outline-light dropdown-toggle mr-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-outline-light dropdown-toggle mb-1 mr-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Hello, ' . ucwords($nama) . '
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <div class="dropdown-menu mb-1" aria-labelledby="btnGroupDrop1">
                       <a class="dropdown-item" href="' . BASE_URL . 'index.php?page=my_profile&module=pesanan&action=list">My Profile</a>
                       <a class="dropdown-item" href="' . BASE_URL . 'logout.php">Logout</a>
                     </div>

@@ -43,11 +43,11 @@ if (mysqli_num_rows($query_pesanan) == 0) {
               <td><?= $row['nama'] ?></td>
               <td><?= $array_status_pesanan[$status] ?></td>
               <td class="text-center">
-                <a class="btn btn-primary btn-sm"
+                <a class="btn btn-primary btn-sm col-12 col-md-4 col-lg-4 col-xl-4 mr-3 mt-1 mb-1"
                   href="<?= BASE_URL ?>index.php?page=my_profile&module=pesanan&action=detail&pesanan_id=<?= $row['pesanan_id']?>"><i class="fas fa-id-card"></i></a>
                 <!-- Button untuk superadmin -->
                 <?php if ($level == "superadmin") : ?>
-                <a class="ml-4 btn btn-warning btn-sm"
+                <a class="btn btn-warning btn-sm col-12 col-md-4 col-lg-4 col-xl-4"
                   href="<?= BASE_URL ?>index.php?page=my_profile&module=pesanan&action=status&pesanan_id=<?= $row['pesanan_id']?>"><i class="fas fa-edit"></i>
                 </a>
                 <?php endif ?>
