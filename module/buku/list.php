@@ -33,7 +33,7 @@ if (mysqli_num_rows($query_buku) == 0) {
             <th>Harga</th>
             <th>Stok</th>
             <th>Status</th>
-            <th>Opsi</th>
+            <th class="text-center"><i class="fas fa-cogs"></i></th>
           </tr>
         </thead>
         <tbody>
@@ -49,11 +49,11 @@ if (mysqli_num_rows($query_buku) == 0) {
             <td><?= rupiah($data['harga']) ?></td>
             <td><?= $data['stok'] ?></td>
             <td><?= $data['status'] ?></td>
-            <td>
+            <td class="text-center">
               <a href="<?= BASE_URL . "index.php?page=my_profile&module=buku&action=form&buku_id=$data[buku_id]" ?>"
-                class="btn btn-sm btn-warning mb-3 col">Edit</a>
+                class="btn btn-sm btn-warning mb-3 col"><i class="fas fa-edit"></i></a>
               <a href="<?= BASE_URL . "module/buku/action.php?button=Delete&buku_id=$data[buku_id]" ?>"
-                class="btn btn-sm btn-danger col">Delete</a>
+                class="btn btn-sm btn-danger col"><i class="fas fa-trash-alt"></i></a>
             </td>
           </tr>
           <?php

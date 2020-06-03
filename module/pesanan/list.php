@@ -16,48 +16,52 @@ if (mysqli_num_rows($query_pesanan) == 0) {
 <?php
 } else {
 ?>
-
 <div class="container pt-4">
-  <h4 class="mb-3">Data Pemesanan</h4>
-  <div class="table-responsive">
-    <table class="table table-hover">
-      <thead>
-        <th>#</th>
-        <th>Nomer Pesanan</th>
-        <th>Nama</th>
-        <th>Status</th>
-        <th class="text-center">Opsi</th>
-      </thead>
-      <tbody>
-        <?php
+  <div class="card card-shadow mb-4">
+    <div class="card-header">
+      <h4><i class="fas fa-box-open"></i> Data Pemesanan</h4>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered" id="myTable" width="100%" cellspacing="0">
+          <thead>
+            <th>#</th>
+            <th>Nomer Pesanan</th>
+            <th>Nama</th>
+            <th>Status</th>
+            <th class="text-center"><i class="fas fa-cogs"></i></th>
+          </thead>
+          <tbody>
+            <?php
           $no = 1;
           while ($row = mysqli_fetch_assoc($query_pesanan)) : 
             $status = $row['status']
           ?>
-        <tr>
-          <td><?= $no ?></td>
-          <td><?= $row['pesanan_id'] ?></td>
-          <td><?= $row['nama'] ?></td>
-          <td><?= $array_status_pesanan[$status] ?></td>
-          <td class="text-center">
-            <a class="btn btn-outline-primary btn-sm"
-              href="<?= BASE_URL ?>index.php?page=my_profile&module=pesanan&action=detail&pesanan_id=<?= $row['pesanan_id']?>">Detail</a>
-            <!-- Button untuk superadmin -->
-            <?php if ($level == "superadmin") : ?>
-            <a class="ml-4 btn btn-outline-warning btn-sm"
-              href="<?= BASE_URL ?>index.php?page=my_profile&module=pesanan&action=status&pesanan_id=<?= $row['pesanan_id']?>">Update
-              Status</a>
-            <?php endif ?>
-            <!-- End Button -->
-          </td>
-        </tr>
-        <?php $no++;
+            <tr>
+              <td><?= $no ?></td>
+              <td><?= $row['pesanan_id'] ?></td>
+              <td><?= $row['nama'] ?></td>
+              <td><?= $array_status_pesanan[$status] ?></td>
+              <td class="text-center">
+                <a class="btn btn-primary btn-sm"
+                  href="<?= BASE_URL ?>index.php?page=my_profile&module=pesanan&action=detail&pesanan_id=<?= $row['pesanan_id']?>"><i class="fas fa-id-card"></i></a>
+                <!-- Button untuk superadmin -->
+                <?php if ($level == "superadmin") : ?>
+                <a class="ml-4 btn btn-warning btn-sm"
+                  href="<?= BASE_URL ?>index.php?page=my_profile&module=pesanan&action=status&pesanan_id=<?= $row['pesanan_id']?>"><i class="fas fa-edit"></i>
+                </a>
+                <?php endif ?>
+                <!-- End Button -->
+              </td>
+            </tr>
+            <?php $no++;
           endwhile ?>
-      </tbody>
-    </table>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </div>
-
 <?php
 }
 ?>

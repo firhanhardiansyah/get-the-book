@@ -28,7 +28,7 @@ if (mysqli_num_rows($query_kategori) == 0) {
               <th>#</th>
               <th>Kategori</th>
               <th>Status</th>
-              <th>Opsi</th>
+              <th class="text-center"><i class="fas fa-cogs"></i></th>
             </tr>
           </thead>
           <tbody>
@@ -40,9 +40,9 @@ if (mysqli_num_rows($query_kategori) == 0) {
                 <td><?= $no ?></td>
                 <td><?= $data['kategori'] ?></td>
                 <td><?= $data['status'] ?></td>
-                <td>
-                  <a href="<?= BASE_URL . "index.php?page=my_profile&module=kategori&action=form&kategori_id=$data[kategori_id]" ?>" class="btn btn-sm btn-warning">Edit</a>
-                  <a href="<?= BASE_URL . "module/kategori/action.php?button=Delete&kategori_id=$data[kategori_id]" ?>" class="btn btn-sm btn-danger">Delete</a>
+                <td class="text-center">
+                  <a href="<?= BASE_URL . "index.php?page=my_profile&module=kategori&action=form&kategori_id=$data[kategori_id]" ?>" class="btn btn-sm btn-warning mr-4"><i class="fas fa-edit"></i></a>
+                  <a href="<?= BASE_URL . "module/kategori/action.php?button=Delete&kategori_id=$data[kategori_id]" ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></a>
                 </td>
               </tr>
             <?php

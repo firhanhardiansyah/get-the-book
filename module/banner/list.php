@@ -29,7 +29,7 @@ if (mysqli_num_rows($query_banner) == 0) {
               <th>Banner</th>
               <th>Link</th>
               <th>Status</th>
-              <th>Opsi</th>
+              <th class="text-center"><i class="fas fa-cogs"></i></th>
             </tr>
           </thead>
           <tbody>
@@ -42,9 +42,9 @@ if (mysqli_num_rows($query_banner) == 0) {
                 <td><?= $data['banner'] ?></td>
                 <td><?= $data['link'] ?></td>
                 <td><?= $data['status'] ?></td>
-                <td>
-                  <a href="<?= BASE_URL . "index.php?page=my_profile&module=banner&action=form&banner_id=$data[banner_id]" ?>" class="btn btn-sm btn-warning">Edit</a>
-                  <a href="<?= BASE_URL . "module/banner/action.php?button=Delete&banner_id=$data[banner_id]" ?>" class="btn btn-sm btn-danger">Delete</a>
+                <td class="text-center">
+                  <a href="<?= BASE_URL . "index.php?page=my_profile&module=banner&action=form&banner_id=$data[banner_id]" ?>" class="btn btn-sm btn-warning mr-4"><i class="fas fa-edit"></i></a>
+                  <a href="<?= BASE_URL . "module/banner/action.php?button=Delete&banner_id=$data[banner_id]" ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></a>
                 </td>
               </tr>
             <?php
