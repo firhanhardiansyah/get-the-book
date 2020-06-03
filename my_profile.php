@@ -23,7 +23,7 @@ if ($user_id) {
               Kategori
             </a>
             <a <?php if ($module == "buku") echo "class='nav-link active'"; ?> class="nav-link" href="<?= BASE_URL . "index.php?page=my_profile&module=buku&action=list" ?>">
-              <div class="sb-nav-link-icon"><i class="fas fa-box"></i></div>
+              <div class="sb-nav-link-icon"><i class="fas fa-book"></i> </div>
               Buku
             </a>
             <a <?php if ($module == "kota") echo "class='nav-link active'"; ?> class="nav-link" href="<?= BASE_URL . "index.php?page=my_profile&module=kota&action=list" ?>">

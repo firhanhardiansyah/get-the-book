@@ -11,9 +11,9 @@
           $query_banner = mysqli_query($con, "SELECT * FROM banner WHERE status='on' ORDER BY banner_id ASC LIMIT 3");
 
           while ($row = mysqli_fetch_assoc($query_banner)) : ?>
-          <a href="<?= BASE_URL . $row['link'] ?>">
-            <img src="<?= BASE_URL ?>assets/img/slide/<?= $row['gambar'] ?>" style="width: 100%">
-          </a>
+            <a href="<?= BASE_URL . $row['link'] ?>">
+              <img src="<?= BASE_URL ?>assets/img/slide/<?= $row['gambar'] ?>" style="width: 100%">
+            </a>
           <?php endwhile ?>
           <a href="#" class="slidesjs-previous slidesjs-navigation mb-3"><i class="icon-chevron-left"></i></a>
           <a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right"></i></a>
@@ -35,16 +35,15 @@
           $query = mysqli_query($con, "SELECT * FROM kategori WHERE status='on' ");
           while ($row = mysqli_fetch_assoc($query)) :
           ?>
-          <div class="col-xl-3 col-lg-3 col-sm-6 col-md-4 col-6 mb-3">
-            <a href="<?= BASE_URL ?>index.php?kategori_id=<?= $row['kategori_id'] ?>"
-              style="text-decoration-line: none">
-              <button class="card card-shadow col" style="border-radius: 20px">
-                <div class="card-body">
-                  <h6 class="card-text text-left"><?= $row['kategori'] ?></h6>
-                </div>
-              </button>
-            </a>
-          </div>
+            <div class="col-xl-3 col-lg-3 col-sm-6 col-md-4 col-6 mb-3">
+              <a href="<?= BASE_URL ?>index.php?kategori_id=<?= $row['kategori_id'] ?>" style="text-decoration-line: none">
+                <button class="card card-shadow col" style="border-radius: 20px">
+                  <div class="card-body">
+                    <h6 class="card-text text-left"><?= $row['kategori'] ?></h6>
+                  </div>
+                </button>
+              </a>
+            </div>
           <?php
           endwhile;
           ?>
@@ -56,9 +55,9 @@
         $row = mysqli_fetch_assoc($query);
         if ($kategori_id) {
         ?>
-        <h4 class="mb-3 mt-3">Buku - <?= $row['kategori'] ?></h4>
+          <h4 class="mb-3 mt-3">Buku - <?= $row['kategori'] ?></h4>
         <?php } else { ?>
-        <h4 class="mb-3 mt-3">Semua Buku</h4>
+          <h4 class="mb-3 mt-3">Semua Buku</h4>
         <?php } ?>
         <!-- Nama Kategori -->
         <div class="row">
@@ -71,31 +70,24 @@
 
           while ($row = mysqli_fetch_assoc($query)) :
           ?>
-          <div class="col-xl-3 col-lg-3 col-sm-6 col-md-4 col-6 mb-3">
-            <div class="card card-shadow" style="height: 95%">
-              <a href="<?= BASE_URL ?>index.php?page=detail&buku_id=<?= $row['buku_id'] ?>">
-                <img class="mt-2 card-img-top img-content" src="<?= BASE_URL ?>assets/img/buku/<?= $row['gambar'] ?>"
-                  alt="Card image cap">
-              </a>
-              <div class="card-body mb-3">
-                <h6 class="card-title"><?= $row['nama_buku'] ?></h6>
-                <div class="row">
-                  <div class="col-xl-6 col-lg-12 col-md-12 col-sm-6 mb-2">
-                    <h6 class="card-text text-danger"><?= rupiah($row['harga']) ?></h6>
+            <div class="col-xl-3 col-lg-3 col-sm-6 col-md-4 col-6 mb-3">
+              <div class="card card-shadow" style="height: 95%">
+                <a href="<?= BASE_URL ?>index.php?page=detail&buku_id=<?= $row['buku_id'] ?>" style="text-decoration: none">
+                  <div class="card-body">
+                    <img class="mb-4 card-shadow card-img-top img-content" src="<?= BASE_URL ?>assets/img/buku/<?= $row['gambar'] ?>" alt="Card image cap">
+                    <h6 class="card-title text-dark"><?= $row['nama_buku'] ?></h6>
+                    <div class="row">
+                      <div class="col-xl-6 col-lg-12 col-md-12 col-sm-6 mb-2">
+                        <h6 class="card-text text-danger"><?= rupiah($row['harga']) ?></h6>
+                      </div>
+                      <div class="col-xl-6 col-lg-12 col-md-12 col-sm-6 mb-4">
+                        <h6 class="card-text text-secondary">Stok : <?= $row['stok'] ?></h6>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-xl-6 col-lg-12 col-md-12 col-sm-6">
-                    <h6 class="card-text text-secondary">Stok : <?= $row['stok'] ?></h6>
-                  </div>
-                </div>
-              </div>
-              <div class="card-footer text-center">
-                <a href="<?= BASE_URL ?>tambah_keranjang.php?buku_id=<?= $row['buku_id'] ?>" class="btn btn-primary"
-                  style="border-radius: 30px; padding: 10px; width: 100%;">
-                  <img src="<?= BASE_URL . 'assets/img/icons8-shopping-basket-60.png' ?>" width="20"> Keranjang
                 </a>
               </div>
             </div>
-          </div>
           <?php
           endwhile;
           ?>
