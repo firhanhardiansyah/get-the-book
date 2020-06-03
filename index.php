@@ -24,6 +24,7 @@ $total_buku  = count($keranjang);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Get The Book</title>
+  <link rel="shortcut icon" href="<?= BASE_URL . 'assets/img/icons8-book-stack-100-logo.png' ?>">
   <link rel="stylesheet" href="<?= BASE_URL . 'assets/bootstrap/css/bootstrap.min.css' ?>">
   <link rel="stylesheet" href="<?= BASE_URL . 'assets/css/style.css' ?>">
   <link rel="stylesheet" href="<?= BASE_URL . 'assets/css/styles-admin.css' ?>">
