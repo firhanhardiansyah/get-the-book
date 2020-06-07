@@ -3,9 +3,9 @@
   <h5>Aplikasi ini dibuat adalah untuk memenuhi tugas akhir dari mata kuliah RPL (Rancangan Perangkat Lunak) </h5>
   <hr>
   <h2>Nama Anggota</h2>
-  <div class="row">
-    <div class="col-xl-4 col-12 mt-4">
-      <div class="card card-shadow" style="width: 18rem;">
+  <div class="card-columns">
+    <div class="">
+      <div class="card card-shadow">
         <img class="mb-4 card-img-top" src="<?= BASE_URL ?>assets/img/tentang/saya.jpeg"
           alt="Card image cap">
         <div class="card-body">
@@ -15,8 +15,8 @@
         </div>
       </div>
     </div>
-    <div class="col-xl-4 col-12 mt-4">
-      <div class="card card-shadow" style="width: 18rem;">
+    <div class="">
+      <div class="card card-shadow">
         <img class="mb-4 card-img-top" src="<?= BASE_URL ?>assets/img/tentang/arees.jpeg"
           alt="Card image cap">
         <div class="card-body">
@@ -26,8 +26,8 @@
         </div>
       </div>
     </div>
-    <div class="col-xl-4 col-12 mt-4">
-      <div class="card card-shadow" style="width: 18rem;">
+    <div class="">
+      <div class="card card-shadow">
         <img class="mb-4 card-img-top" src="<?= BASE_URL ?>assets/img/tentang/wafi.jpeg"
           alt="Card image cap">
         <div class="card-body">
@@ -37,8 +37,8 @@
         </div>
       </div>
     </div>
-    <div class="col-xl-4 col-12 mt-4">
-      <div class="card card-shadow" style="width: 18rem;">
+    <div class="">
+      <div class="card card-shadow">
         <img class="mb-4 card-img-top" src="<?= BASE_URL ?>assets/img/tentang/alfina.jpeg"
           alt="Card image cap">
         <div class="card-body">
@@ -48,8 +48,8 @@
         </div>
       </div>
     </div>
-    <div class="col-xl-4 col-12 mt-4">
-      <div class="card card-shadow" style="width: 18rem;">
+    <div class="">
+      <div class="card card-shadow">
         <img class="mb-4 card-img-top" src="<?= BASE_URL ?>assets/img/tentang/nurul.jpeg"
           alt="Card image cap">
         <div class="card-body">
