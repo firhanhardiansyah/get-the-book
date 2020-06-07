@@ -1,6 +1,6 @@
 <?php
 
-  $host = "getthebook.my.id";
+  $host = "ftp.getthebook.my.id";
   $user = "getq5835_user1";
   $pass = "showmesecret01!";
   $db   = "getq5835_get_the_book";
