@@ -1,6 +1,6 @@
 <?php
 
-define("BASE_URL", "http://localhost/book-store/");
+define("BASE_URL", "https://brazilian-interpret.000webhostapp.com/");
 
 function rupiah($nilai = 0)
 {
