@@ -1,7 +1,7 @@
 <?php
 
-  $host = "localhost";
-  $user = "id13988189_hanz";
+  $host = "ftp.getthebook.my.id";
+  $user = "getq5835";
   $pass = "WjM2Q~2R2FR[lrf0";
   $db   = "id13988189_get_the_book";
 
