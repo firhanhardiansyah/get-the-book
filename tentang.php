@@ -6,7 +6,8 @@
   <div class="row">
     <div class="col-xl-4 col-12 mt-4">
       <div class="card">
-        <img class="mb-4 card-shadow card-img-top" src="<?= BASE_URL ?>assets/img/tentang/saya.jpeg" alt="Card image cap">
+        <img class="mb-4 card-shadow card-img-top" src="<?= BASE_URL ?>assets/img/tentang/saya.jpeg"
+          alt="Card image cap">
         <div class="card-body">
           <h5 class="text-secondary">Front End & Back End</h5>
           <h4>Firhan Hardiansyah</h4>
@@ -16,6 +17,8 @@
     </div>
     <div class="col-xl-4 col-12 mt-4">
       <div class="card">
+        <img class="mb-4 card-shadow card-img-top" src="<?= BASE_URL ?>assets/img/tentang/arees.jpeg"
+          alt="Card image cap">
         <div class="card-body">
           <h5 class="text-secondary">Design 1</h5>
           <h4>Arees Khatara</h4>
@@ -25,6 +28,8 @@
     </div>
     <div class="col-xl-4 col-12 mt-4">
       <div class="card">
+        <img class="mb-4 card-shadow card-img-top" src="<?= BASE_URL ?>assets/img/tentang/wafi.jpeg"
+          alt="Card image cap">
         <div class="card-body">
           <h5 class="text-secondary">Design 2</h5>
           <h4>Wafiudin</h4>
@@ -34,6 +39,8 @@
     </div>
     <div class="col-xl-4 col-12 mt-4">
       <div class="card">
+        <img class="mb-4 card-shadow card-img-top" src="<?= BASE_URL ?>assets/img/tentang/alfina.jpeg"
+          alt="Card image cap">
         <div class="card-body">
           <h5 class="text-secondary">System Analyst 1</h5>
           <h4>Alfina Noviyanti</h4>
@@ -43,6 +50,8 @@
     </div>
     <div class="col-xl-4 col-12 mt-4">
       <div class="card">
+        <img class="mb-4 card-shadow card-img-top" src="<?= BASE_URL ?>assets/img/tentang/nurul.jpeg"
+          alt="Card image cap">
         <div class="card-body">
           <h5 class="text-secondary">System Analyst 2</h5>
           <h4>Nurul</h4>
