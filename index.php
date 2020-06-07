@@ -46,7 +46,7 @@ $total_buku  = count($keranjang);
             <img src="<?= BASE_URL . 'assets/img/icons8-book-stack-100.png' ?>" width="50">
           </div>
           <div class="col">
-            <h3 class="mt-2" style="font-family: 'Dancing Script', cursive;"> Online Book Store </h3>
+            <h3 class="mt-2" style="font-family: 'Dancing Script', cursive;"> Get The Book </h3>
           </div>
         </div>
       </a>
