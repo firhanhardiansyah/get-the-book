@@ -1,6 +1,6 @@
 <?php
 
-define("BASE_URL", "https://getthebook.my.id/");
+define("BASE_URL", "https://www.getthebook.my.id/");
 
 function rupiah($nilai = 0)
 {
