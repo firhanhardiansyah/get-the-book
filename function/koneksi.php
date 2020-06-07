@@ -1,6 +1,6 @@
 <?php
 
-  $host = "ftp.getthebook.my.id";
+  $host = "localhost";
   $user = "getq5835_user1";
   $pass = "showmesecret01!";
   $db   = "getq5835_get_the_book";
