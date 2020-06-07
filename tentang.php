@@ -5,8 +5,8 @@
   <h2>Nama Anggota</h2>
   <div class="row">
     <div class="col-xl-4 col-12 mt-4">
-      <div class="card" style="width: 18rem;">
-        <img class="mb-4 card-shadow card-img-top" src="<?= BASE_URL ?>assets/img/tentang/saya.jpeg"
+      <div class="card card-shadow" style="width: 18rem;">
+        <img class="mb-4 card-img-top" src="<?= BASE_URL ?>assets/img/tentang/saya.jpeg"
           alt="Card image cap">
         <div class="card-body">
           <h5 class="text-secondary">Front End & Back End</h5>
@@ -16,8 +16,8 @@
       </div>
     </div>
     <div class="col-xl-4 col-12 mt-4">
-      <div class="card" style="width: 18rem;">
-        <img class="mb-4 card-shadow card-img-top" src="<?= BASE_URL ?>assets/img/tentang/arees.jpeg"
+      <div class="card card-shadow" style="width: 18rem;">
+        <img class="mb-4 card-img-top" src="<?= BASE_URL ?>assets/img/tentang/arees.jpeg"
           alt="Card image cap">
         <div class="card-body">
           <h5 class="text-secondary">Design 1</h5>
@@ -27,8 +27,8 @@
       </div>
     </div>
     <div class="col-xl-4 col-12 mt-4">
-      <div class="card" style="width: 18rem;">
-        <img class="mb-4 card-shadow card-img-top" src="<?= BASE_URL ?>assets/img/tentang/wafi.jpeg"
+      <div class="card card-shadow" style="width: 18rem;">
+        <img class="mb-4 card-img-top" src="<?= BASE_URL ?>assets/img/tentang/wafi.jpeg"
           alt="Card image cap">
         <div class="card-body">
           <h5 class="text-secondary">Design 2</h5>
@@ -38,8 +38,8 @@
       </div>
     </div>
     <div class="col-xl-4 col-12 mt-4">
-      <div class="card" style="width: 18rem;">
-        <img class="mb-4 card-shadow card-img-top" src="<?= BASE_URL ?>assets/img/tentang/alfina.jpeg"
+      <div class="card card-shadow" style="width: 18rem;">
+        <img class="mb-4 card-img-top" src="<?= BASE_URL ?>assets/img/tentang/alfina.jpeg"
           alt="Card image cap">
         <div class="card-body">
           <h5 class="text-secondary">System Analyst 1</h5>
@@ -49,8 +49,8 @@
       </div>
     </div>
     <div class="col-xl-4 col-12 mt-4">
-      <div class="card" style="width: 18rem;">
-        <img class="mb-4 card-shadow card-img-top" src="<?= BASE_URL ?>assets/img/tentang/nurul.jpeg"
+      <div class="card card-shadow" style="width: 18rem;">
+        <img class="mb-4 card-img-top" src="<?= BASE_URL ?>assets/img/tentang/nurul.jpeg"
           alt="Card image cap">
         <div class="card-body">
           <h5 class="text-secondary">System Analyst 2</h5>
