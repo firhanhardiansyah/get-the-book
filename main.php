@@ -63,10 +63,10 @@
         <div class="row">
           <?php
           if ($kategori_id) {
-            $query = mysqli_query($con, "SELECT * FROM buku WHERE status='on' AND kategori_id='$kategori_id' ORDER BY rand() DESC");
-          } else {
-            $query = mysqli_query($con, "SELECT * FROM buku WHERE status='on' ORDER BY rand() ASC");
+            $kategori_id = "AND kategori_id='$kategori_id'";
           }
+          
+          $query = mysqli_query($con, "SELECT * FROM buku WHERE status='on' $kategori_id ORDER BY rand() ASC");
 
           while ($row = mysqli_fetch_assoc($query)) :
           ?>

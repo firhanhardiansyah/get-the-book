@@ -35,6 +35,15 @@ function kategori($kategori_id = false)
   return  $string;
 }
 
+function admin_only($level, $module) {
+  if ($level != "superadmin") {
+    $admin_pages = ["kategori", "buku", "kota", "user", "banner"];
+    if (in_array($module, $admin_pages)) {
+      header("Location: ".BASE_URL);
+    }
+  }
+}
+
 $array_status_pesanan[0] = "Belum Pembayaran";
 $array_status_pesanan[1] = "Pembayaran Sedang Di Proses";
 $array_status_pesanan[2] = "Pembayaran Berhasil";

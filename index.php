@@ -53,7 +53,8 @@ $total_buku  = count($keranjang);
       <!-- End Brand -->
 
       <!-- Button akan tampil jika dilayar hp atau tablet -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <!-- End Button -->
@@ -78,7 +79,7 @@ $total_buku  = count($keranjang);
           $btn_my_profile = "$page.php" == "my_profile.php";
           if ($btn_my_profile) :
           ?>
-            <button class="btn btn-outline-light mb-1 mr-3" id="sidebarToggle" href="#">Menu</button>
+          <button class="btn btn-outline-light mb-1 mr-3" id="sidebarToggle" href="#">Menu</button>
           <?php endif ?>
           <!-- End Menu Side bar -->
           <div class="float-right">

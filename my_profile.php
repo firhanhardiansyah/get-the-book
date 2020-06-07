@@ -8,6 +8,8 @@ if ($user_id) {
   header("Location: " . BASE_URL . "index.php?page=login");
 }
 
+admin_only($level, $module);
+
 ?>
 <!-- SideBar & Content -->
 <div id="layoutSidenav">
@@ -66,13 +68,18 @@ if ($user_id) {
         if (file_exists($file)) {
           include_once($file);
         } else {
-          echo "Halaman Tidak Ada";
+        ?>
+        <div class="container pt-4 mt-4 text-center">
+          <h2>404 Page not found</h2>
+          <h4>Tidak Ada Bro !</h4>
+        </div>
+        <?php
         }
         ?>
       </div>
     </main>
     <?php
-      require_once("footer.php");
+    require_once("footer.php");
     ?>
   </div>
   <!-- End Content -->
