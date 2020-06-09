@@ -29,6 +29,7 @@ if (mysqli_num_rows($query_pesanan) == 0) {
             <th>Nomer Pesanan</th>
             <th>Nama</th>
             <th>Status</th>
+            <th>Tanggal Pemesanan</th>
             <th class="text-center"><i class="fas fa-cogs"></i></th>
           </thead>
           <tbody>
@@ -42,12 +43,13 @@ if (mysqli_num_rows($query_pesanan) == 0) {
               <td><?= $row['pesanan_id'] ?></td>
               <td><?= $row['nama'] ?></td>
               <td><?= $array_status_pesanan[$status] ?></td>
+              <td><?= $row['tanggal_pemesanan'] ?></td>
               <td class="text-center">
-                <a class="btn btn-primary btn-sm col-12 col-md-4 col-lg-4 col-xl-4 mr-3 mt-1 mb-1"
+                <a class="btn btn-primary btn-sm col-12 col-md-12 col-lg-12 col-xl-12 mr-3 mb-1"
                   href="<?= BASE_URL ?>index.php?page=my_profile&module=pesanan&action=detail&pesanan_id=<?= $row['pesanan_id']?>"><i class="fas fa-id-card"></i></a>
                 <!-- Button untuk superadmin -->
                 <?php if ($level == "superadmin") : ?>
-                <a class="btn btn-warning btn-sm col-12 col-md-4 col-lg-4 col-xl-4"
+                <a class="btn btn-warning btn-sm col-12 col-md-12 col-lg-12 col-xl-12"
                   href="<?= BASE_URL ?>index.php?page=my_profile&module=pesanan&action=status&pesanan_id=<?= $row['pesanan_id']?>"><i class="fas fa-edit"></i>
                 </a>
                 <?php endif ?>
