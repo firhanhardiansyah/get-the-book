@@ -9,7 +9,8 @@
             pesanan.tanggal_pemesanan,
             user.nama,
             kota.kota,
-            kota.tarif
+            kota.tarif,
+            pesanan.status
       FROM pesanan JOIN user ON pesanan.user_id=user.user_id 
       JOIN kota ON kota.kota_id=pesanan.kota_id
       WHERE pesanan.pesanan_id='$pesanan_id'");
@@ -22,7 +23,8 @@
   $kota              = $row['kota'];
   $tarif             = $row['tarif'];
   $tanggal_pemesanan = $row['tanggal_pemesanan'];
-  $nama             = $row['nama'];
+  $nama              = $row['nama'];
+  $status            = $row['status'];
 
 ?>
 
@@ -65,10 +67,18 @@
               <th>:</th>
               <td><?= $tanggal_pemesanan ?></td>
             </tr>
+            <tr>
+              <th>Status Pembayaran</th>
+              <th>:</th>
+              <td><?= $array_status_pesanan[$status] ?></td>
+            </tr>
           </table>
         </div>
       </div>
     </div>
+    <?php 
+      if ($status == 0 ) :
+    ?>
     <div class="col-xl-4">
       <div class="card card-shadow">
         <div class="card-header">
@@ -83,6 +93,7 @@
         </div>
       </div>
     </div>
+    <?php endif; ?>
   </div>
 
 
