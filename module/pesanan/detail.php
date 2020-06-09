@@ -29,75 +29,7 @@
 ?>
 
 <div class="container pt-4">
-  <div class="row">
-    <div class="col-xl-8 mb-4">
-      <div class="card card-shadow">
-        <div class="card-header">
-          <h5>Pesanan</h5>
-        </div>
-        <div class="card-body">
-          <table class="table">
-            <tr>
-              <th>No Pemesanan</th>
-              <th>:</th>
-              <td><?= $pesanan_id ?></td>
-            </tr>
-            <tr>
-              <th>Nama Pemesan</th>
-              <th>:</th>
-              <td><?= ucwords($nama) ?></td>
-            </tr>
-            <tr>
-              <th>Nama Penerima</th>
-              <th>:</th>
-              <td><?= ucwords($nama_penerima) ?></td>
-            </tr>
-            <tr>
-              <th>No Telepon</th>
-              <th>:</th>
-              <td><?= $nomor_telepon ?></td>
-            </tr>
-            <tr>
-              <th>Alamat</th>
-              <th>:</th>
-              <td><?= $alamat ?></td>
-            </tr>
-            <tr>
-              <th>Tanggal Pemesanan</th>
-              <th>:</th>
-              <td><?= $tanggal_pemesanan ?></td>
-            </tr>
-            <tr>
-              <th>Status Pembayaran</th>
-              <th>:</th>
-              <td><?= $array_status_pesanan[$status] ?></td>
-            </tr>
-          </table>
-        </div>
-      </div>
-    </div>
-    <?php 
-      if ($status == 0 ) :
-    ?>
-    <div class="col-xl-4">
-      <div class="card card-shadow">
-        <div class="card-header">
-          <h5>Keterangan Pembayaran</h5>
-        </div>
-        <div class="card-body">
-          <p class="card-text">Silahkan lakukan pembayaran ke Bank Toyib</p>
-          <p class="card-text">No Rekening : 0000-1234-8899 <br> (A/N Deadliners)</p>
-          <p class="card-text">Setelah melakukan pembayaran <br> Silahkan lakukan konfirmasi</p>
-          <a href="<?= BASE_URL ?>index.php?page=my_profile&module=pesanan&action=konfirmasi_pembayaran&pesanan_id=<?= $pesanan_id ?>"
-            class="btn btn-success card-shadow" style="border-radius: 30px; padding: 10px; width: 100%;">Konfirmasi</a>
-        </div>
-      </div>
-    </div>
-    <?php endif; ?>
-  </div>
-
-
-  <div class="mt-4 card card-shadow">
+  <div class="card card-shadow">
     <div class="card-header">
       <h5>Detail Pemesanan</h5>
     </div>
@@ -155,5 +87,107 @@
         </table>
       </div>
     </div>
+  </div>
+  <div class="mt-4 row">
+    <div class="col-xl-8 mb-4">
+      <div class="card card-shadow">
+        <?php if ($status == 0) : ?>
+        <div class="card-header bg-danger text-white">
+          <h5>Pesanan</h5>
+        </div>
+        <?php endif ?>
+        <?php if ($status == 1) : ?>
+        <div class="card-header bg-info text-white">
+          <h5>Pesanan</h5>
+        </div>
+        <?php endif ?>
+        <?php if ($status == 2) : ?>
+        <div class="card-header bg-success text-white">
+          <h5>Pesanan</h5>
+        </div>
+        <?php endif ?>
+        <?php if ($status == 3) : ?>
+        <div class="card-header bg-danger text-white">
+          <h5>Pesanan</h5>
+        </div>
+        <?php endif ?>
+        <div class="card-body">
+          <table class="table">
+            <tr>
+              <th>No Pemesanan</th>
+              <th>:</th>
+              <td><?= $pesanan_id ?></td>
+            </tr>
+            <tr>
+              <th>Nama Pemesan</th>
+              <th>:</th>
+              <td><?= ucwords($nama) ?></td>
+            </tr>
+            <tr>
+              <th>Nama Penerima</th>
+              <th>:</th>
+              <td><?= ucwords($nama_penerima) ?></td>
+            </tr>
+            <tr>
+              <th>No Telepon</th>
+              <th>:</th>
+              <td><?= $nomor_telepon ?></td>
+            </tr>
+            <tr>
+              <th>Alamat</th>
+              <th>:</th>
+              <td><?= $alamat ?></td>
+            </tr>
+            <tr>
+              <th>Tanggal Pemesanan</th>
+              <th>:</th>
+              <td><?= $tanggal_pemesanan ?></td>
+            </tr>
+            <tr>
+              <th>Status Pembayaran</th>
+              <th>:</th>
+              <?php if ($status == 0) : ?>
+              <td class="text-danger">
+                <h6><?= $array_status_pesanan[$status] ?></h6>
+              </td>
+              <?php endif ?>
+              <?php if ($status == 1) : ?>
+              <td class="text-info">
+                <h6><?= $array_status_pesanan[$status] ?></h6>
+              </td>
+              <?php endif ?>
+              <?php if ($status == 2) : ?>
+              <td class="text-success">
+                <h6><?= $array_status_pesanan[$status] ?></h6>
+              </td>
+              <?php endif ?>
+              <?php if ($status == 3) : ?>
+              <td class="text-danger">
+                <h6><?= $array_status_pesanan[$status] ?></h6>
+              </td>
+              <?php endif ?>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <?php 
+      if ($status == 0 ) :
+    ?>
+    <div class="col-xl-4">
+      <div class="card card-shadow">
+        <div class="card-header bg-success text-white">
+          <h5>Keterangan Pembayaran</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Silahkan lakukan pembayaran ke Bank Toyib</p>
+          <p class="card-text">No Rekening : 0000-1234-8899 <br> (A/N Deadliners)</p>
+          <p class="card-text">Setelah melakukan pembayaran <br> Silahkan lakukan konfirmasi</p>
+          <a href="<?= BASE_URL ?>index.php?page=my_profile&module=pesanan&action=konfirmasi_pembayaran&pesanan_id=<?= $pesanan_id ?>"
+            class="btn btn-success card-shadow" style="border-radius: 30px; padding: 10px; width: 100%;">Konfirmasi</a>
+        </div>
+      </div>
+    </div>
+    <?php endif ?>
   </div>
 </div>
