@@ -1,8 +1,8 @@
 <?php
 
   $host = "localhost";
-  $user = "getq5835_user1";
-  $pass = "showmesecret01!";
-  $db   = "getq5835_get_the_book";
+  $user = "root";
+  $pass = "";
+  $db   = "db_book_store";
 
   $con = mysqli_connect($host, $user, $pass, $db) or die("Koneksi Gagal");
