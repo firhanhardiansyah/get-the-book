@@ -31,7 +31,7 @@
               </button>
             </a>
           </div>
-          <?php
+          <?php 
           $query = mysqli_query($con, "SELECT * FROM kategori WHERE status='on' ");
           while ($row = mysqli_fetch_assoc($query)) :
           ?>

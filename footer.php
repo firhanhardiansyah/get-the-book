@@ -3,8 +3,7 @@
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">
-    Copyright &copy; Firhan Hardiansyah |
-    Build : Selasa, ‎05 ‎Mei ‎2020, ‏‎05.40.55
+    Copyright &copy; SITEKTIF
   </div>
   <!-- Copyright -->
 
