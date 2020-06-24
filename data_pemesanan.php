@@ -111,19 +111,14 @@
 <?php
   } else {
     $_SESSION['proses_pemesanan'] = true;
-?>
-  <div class="container pt-4">
-    <h3>Harus login terlebih dahulu untuk melanjutkan pembayaran . . .</h3>
-  </div>
-<?php
-    header("Location:". BASE_URL . "index.php?page=login");;
+    include_once("login.php");
+    header("Location:". BASE_URL . "index.php?page=login");
     exit;
-
+  }
 ?>
 
 <!-- Footer -->
 <?php
-}
 require_once("footer.php");
 ?>
 <!-- End Footer -->
