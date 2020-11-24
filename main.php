@@ -6,7 +6,7 @@
     <main>
       <div class="container">
         <!-- Banner -->
-        <div class="" id="slides2">
+        <div class="" style="height: 300px;" id="slides2">
           <?php
           $query_banner = mysqli_query($con, "SELECT * FROM banner WHERE status='on' ORDER BY banner_id ASC LIMIT 3");
 
